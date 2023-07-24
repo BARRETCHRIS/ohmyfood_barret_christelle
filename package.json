@@ -4,7 +4,7 @@
   "description": "---     \r _Projet n°3 de la formation Développeur d'application JavaScript React d'Open Classrooms_  \r _Etudiant auteur Christelle Barret, Crazy Beasty_  \r ---  \r ## Notice",
   "main": "index.js",
   "scripts": {
-    "compile": "sass ../sass/default.scss ../css/defult.css --watch"
+    "compile": "sass sass/default.scss assets/css/default.css --watch"
   },
   "keywords": [],
   "author": "Christelle Barret, Crazy Beasty",

@@ -1,13 +1,58 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-img {
-  width: 50%;
+img, picture, video, canvas, svg {
+  display: block;
+  width: 100%;
 }
 
-body {
-  background-color: aqua;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input, fieldset {
+  border: inherit;
+  background-color: inherit;
+  color: black;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav img {
+  height: 36px;
+  margin: 15px 0;
+}
+nav .header-form {
+  background: #EAEAEA;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+nav .header-form div {
+  width: 60%;
+  max-width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 16px;
+}
+nav .header-form div input {
+  width: 100px;
+}
+nav .header-form div input ::placeholder {
+  margin: 0 auto;
+}
+
+.use_steps li {
+  width: 33%;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 /*# sourceMappingURL=default.css.map */

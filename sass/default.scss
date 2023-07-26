@@ -5,12 +5,14 @@ $bg-content: #F6F6F6;
 $bg-home-form: #EAEAEA;
 $bg-footer: #353535;
 $gradient: linear-gradient(#FF79DA, #9356DC);
-$main-adjst-color: #99E2D0;
-$main-adjst-color-txt: #008766;
+$new-adjust-color: #99E2D0;
+$new-adjust-color-txt: #008766;
 $home-adjust-color: #9356DC; 
 
 // ##MIXIN
-
+// Fonts
+@mixin main-font{font-family: 'Roboto', sans-serif;}
+@mixin theme-font{font-family: 'Shrikhand', cursive ;}
 
 
 // ##RESET & GENERAL
@@ -21,17 +23,15 @@ img, picture, video, canvas, svg{display: block;width: 100%;}
 
 a{text-decoration: none; color: black;}
 
-input, fieldset{border: inherit; background-color: inherit; color: black;}
+input, fieldset{border: inherit; background-color: inherit; color: inherit; font-family: inherit;}
 
 body{
-    font-family: 'Roboto', sans-serif;
+    @include main-font;
     font-size: 1rem;
 }
-header{
-    margin-bottom: 1rem;
-}
+
 section, footer{
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 }
 
 // --HEADER--
@@ -62,8 +62,8 @@ nav{
     }
     
 }
-// Uniquement dans index.html
-/* Uniquement dans index.html */
+// --Home Page--
+/* --Home Page-- */
 .home-form{
     background: $bg-home-form;
     display: flex;
@@ -89,10 +89,42 @@ nav{
     }   
 }
 
+// ##MAIN
+/*  ##MAIN## */
+// --Home Page--
+/* --Home Page-- */
+.sub_header{
+    background: $bg-content;
+    text-align: center;
+    padding: 1.5rem 20%;
 
+    h1, p{margin: 1rem 0;}
 
-// --MAIN--
-/* --MAIN-- */
+    h1{
+        font-size: 1.5rem; 
+        font-weight: 700;
+
+        @media (min-width: 767px){
+            font-size: 2.5rem;
+        }
+    }
+
+    p{font-size: 1.12rem; font-weight: 300;}
+
+    a{
+        width: 218px;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem auto;
+        color: white;
+        background: $gradient;
+        border-radius: 50px;    
+    }
+
+}
+
 
 
 .use_steps{
@@ -133,7 +165,7 @@ footer{
         color: white;
 
         &.footer-title{
-            font-family: 'Shrikhand', cursive ;
+            @include theme-font;
             font-size: 1.4rem;
         }
 

@@ -94,20 +94,56 @@ nav .return-home .fa-arrow-left {
 footer {
   background: #353535;
 }
-footerdl, footer dt, footer dd {
-  padding: 0.5rem 0;
+footer dl {
+  display: flex;
+  flex-direction: column;
 }
-footerdl a, footer dt a, footer dd a {
+@media (min-width: 767px) {
+  footer dl {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer dl dt {
+    width: 100%;
+    text-align: center;
+  }
+  footer dl dt, footer dl dd {
+    margin: 0.5rem;
+  }
+}
+footer dt {
+  margin: 1rem 0;
+}
+footer dd {
+  margin: 0.4rem 0;
+}
+footer a {
   color: white;
 }
-
-.footer-title {
+footer a.footer-title {
   font-family: "Shrikhand", cursive;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
-
-.fa-utensils, .fa-handshake-angle {
+footer a .fa-utensils, footer a .fa-handshake-angle {
   margin-right: 1rem;
+}
+@media (min-width: 1023px) {
+  footer {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer dl {
+    width: 70%;
+  }
+  footer dl dt {
+    order: 5;
+    width: 20%;
+    text-align: none;
+  }
 }
 
 /*# sourceMappingURL=default.css.map */

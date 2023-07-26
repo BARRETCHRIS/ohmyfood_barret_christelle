@@ -1,17 +1,19 @@
 
-// **VARIBLES**
+// ##VARIBLES
 // Color
 $bg-content: #F6F6F6;
 $bg-home-form: #EAEAEA;
 $bg-footer: #353535;
 $gradient: linear-gradient(#FF79DA, #9356DC);
- 
+$main-adjst-color: #99E2D0;
+$main-adjst-color-txt: #008766;
+$home-adjust-color: #9356DC; 
 
-// **MIXIN**
+// ##MIXIN
 
 
 
-// **RESET & GENERAL
+// ##RESET & GENERAL
 /*  ##RESET & GENERAL## */
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
@@ -25,9 +27,15 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
+header{
+    margin-bottom: 1rem;
+}
+section, footer{
+    padding: 1rem;
+}
 
 // --HEADER--
-/* --HEADER--*/
+/* --HEADER-- */
 nav{
     width: 100%;
     max-height: 23.5rem;
@@ -84,7 +92,7 @@ nav{
 
 
 // --MAIN--
-/* --MAIN--*/
+/* --MAIN-- */
 
 
 .use_steps{
@@ -93,4 +101,25 @@ nav{
     height: 50px;
     background: $gradient;
     }
-} 
+}
+
+// Footer
+/* Footer */
+footer{
+    background: $bg-footer;
+    &dl, dt, dd{
+        padding: 0.5rem 0;
+        a{
+            color: white;
+        }    
+    }
+}
+.footer-title{
+    font-family: 'Shrikhand', cursive ;
+    font-size: 1.2rem;
+}
+
+.fa-utensils, .fa-handshake-angle{
+    margin-right: 1rem;
+}
+

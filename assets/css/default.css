@@ -220,8 +220,9 @@ h2 {
   font-weight: 300;
 }
 .restaurants article .fa-heart {
+  font-size: 1.5rem;
   position: absolute;
-  bottom: 1.75rem;
+  bottom: 1.5rem;
   right: 1.5rem;
 }
 @media (min-width: 767px) {
@@ -234,6 +235,91 @@ h2 {
   .restaurants .resto-wrapper-cards article {
     width: 48%;
   }
+}
+
+/* --Resto pages-- */
+.resto_page img {
+  height: 275px;
+  object-fit: cover;
+}
+.resto_page .menu-card {
+  background: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  max-width: 1440px;
+  margin: -20px auto 0 auto;
+  border: 3px solid red;
+}
+.resto_page .menu-card .resto_title {
+  max-width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resto_page .menu-card .resto_title h1 {
+  font-family: "Shrikhand", cursive;
+}
+.resto_page .menu-card .resto_title h1, .resto_page .menu-card .resto_title .fa-heart {
+  font-size: 28px;
+  margin: 1rem 0;
+}
+@media (min-width: 767px) {
+  .resto_page .menu-card .resto_title {
+    margin: 1rem auto;
+  }
+}
+.resto_page .menu-card form {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.resto_page .menu-card form fieldset {
+  padding: 1.5rem 0;
+}
+.resto_page .menu-card form legend hr {
+  width: 40px;
+  height: 3px;
+  border: none;
+  background: #99E2D0;
+  margin: 0.25rem 0 0 0;
+}
+.resto_page .menu-card form .form_card {
+  width: 100%;
+  background: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 15px;
+  position: relative;
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+}
+.resto_page .menu-card form .form_card label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.resto_page .menu-card form .form_card h2 {
+  margin: 0 0 0.5rem 0;
+  max-width: 100%;
+  min-width: 75%;
+}
+.resto_page .menu-card form .form_card input {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  box-shadow: none;
+  width: 90px;
+  height: 100%;
+}
+.resto_page .menu-card form .order {
+  width: 218px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem auto;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 50px;
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
 }
 
 /* Footer */

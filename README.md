@@ -10,5 +10,7 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
 
 ## Nota Bene    
 ### comentaires SASS  
-**Notes de correction** chercher !NB! dans default.scss
+**Notes de correction** chercher !NB! dans default.scss  
+  
+NB: corriger les hearts sur toutes les pages, passage de span à button.
 

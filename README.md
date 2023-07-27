@@ -7,3 +7,8 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
     
 ### HTML  
 **Input de recherche position** : fichier **index.html ligne n°31**. Disabled activé sur l'input, veillez à le réactiver pour rendre l'input utilisable.
+
+## Nota Bene    
+### comentaires SASS  
+**Notes de correction** chercher !NB! dans default.scss
+

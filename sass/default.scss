@@ -105,6 +105,8 @@ nav{
 /*  ##MAIN## */
 // --Home Page--
 /* --Home Page-- */
+
+//!NB! pb gestion position du btn à screan 280px, peut etre pb du au padding, voir modif avec width sur chaque élément
 .sub_header{
     background: $bg-content;
     text-align: center;
@@ -187,6 +189,10 @@ nav{
         
         }
     }
+}
+
+.restaurants{
+    background: $bg-content;
 }
 
 

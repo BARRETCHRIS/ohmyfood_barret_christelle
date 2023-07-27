@@ -28,16 +28,7 @@ body {
 }
 
 section, footer {
-  padding: 1.75rem 1rem;
-}
-
-h2, h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 1rem 0;
-}
-h2h3, h3h3 {
-  font-size: 1.12rem;
+  padding: 2rem 1.5rem;
 }
 
 /* --HEADER-- */
@@ -66,6 +57,15 @@ nav .return-home .fa-arrow-left {
 }
 
 /* --Home Page-- */
+.home_page h2, .home_page h3 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 1rem 0;
+}
+
 .home-form {
   background: #EAEAEA;
   display: flex;
@@ -151,11 +151,9 @@ nav .return-home .fa-arrow-left {
   color: white;
   background: #9356DC;
   text-align: center;
-  vertical-align: center;
   line-height: 1.55rem;
   position: relative;
   left: -1.5rem;
-  overflow: visible;
 }
 .use_steps li i {
   margin-right: 1.5rem;
@@ -179,6 +177,63 @@ nav .return-home .fa-arrow-left {
 
 .restaurants {
   background: #F6F6F6;
+}
+.restaurants .resto-wrapper-cards {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.restaurants article {
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  margin: 1rem 0;
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+}
+.restaurants article .new {
+  width: 5rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #99E2D0;
+  color: #008766;
+  text-align: center;
+  line-height: 1.8rem;
+  border-radius: 2px;
+}
+.restaurants article img {
+  height: 14.45rem;
+  object-fit: cover;
+}
+.restaurants article .content-articles {
+  padding: 1rem;
+}
+.restaurants article .content-articles h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+.restaurants article .content-articles p {
+  font-weight: 300;
+}
+.restaurants article .fa-heart {
+  position: absolute;
+  bottom: 1.75rem;
+  right: 1.5rem;
+}
+@media (min-width: 767px) {
+  .restaurants .resto-wrapper-cards {
+    justify-content: space-between;
+  }
+  .restaurants .resto-wrapper-cards h2 {
+    width: 100%;
+  }
+  .restaurants .resto-wrapper-cards article {
+    width: 48%;
+  }
 }
 
 /* Footer */

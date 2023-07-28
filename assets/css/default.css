@@ -57,7 +57,7 @@ nav .return-home .fa-arrow-left {
 }
 
 /* --Home Page-- */
-.home_page h2, .home_page h3 {
+.home-page h2, .home-page h3 {
   font-weight: 700;
 }
 
@@ -92,28 +92,28 @@ h2 {
 
 /*  ##MAIN## */
 /* --Home Page-- */
-.sub_header {
+.sub-header {
   background: #F6F6F6;
   text-align: center;
   padding: 1.5rem 20%;
   /* Hook restaurant*/
 }
-.sub_header h1 {
+.sub-header h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1rem 0;
 }
 @media (min-width: 767px) {
-  .sub_header h1 {
+  .sub-header h1 {
     font-size: 2.5rem;
   }
 }
-.sub_header p {
+.sub-header p {
   font-size: 1.12rem;
   font-weight: 300;
   margin: 1rem 0;
 }
-.sub_header a {
+.sub-header a {
   width: 218px;
   height: 50px;
   display: flex;
@@ -126,14 +126,14 @@ h2 {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
 }
 
-.use_steps {
+.use-steps {
   list-style-position: inside;
 }
-.use_steps ol {
+.use-steps ol {
   padding-left: 0.5rem;
   list-style: none;
 }
-.use_steps li {
+.use-steps li {
   width: 100%;
   height: 50px;
   border-radius: 20px;
@@ -144,7 +144,7 @@ h2 {
   margin: 1.5rem 0;
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
 }
-.use_steps li span {
+.use-steps li span {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -155,36 +155,36 @@ h2 {
   position: relative;
   left: -1.5rem;
 }
-.use_steps li i {
+.use-steps li i {
   margin-right: 1.5rem;
 }
-.use_steps li .fa-store {
+.use-steps li .fa-store {
   color: #9356DC;
 }
 @media (min-width: 767px) {
-  .use_steps {
+  .use-steps {
     max-width: 1080px;
     margin: 0 auto;
   }
-  .use_steps ol {
+  .use-steps ol {
     display: flex;
     justify-content: space-between;
   }
-  .use_steps ol li {
+  .use-steps ol li {
     width: 31%;
   }
 }
 
-.restaurants {
+.resto {
   background: #F6F6F6;
 }
-.restaurants .resto-wrapper-cards {
+.resto .resto-wrapper {
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
-.restaurants article {
+.resto article {
   width: 100%;
   border-radius: 25px;
   overflow: hidden;
@@ -193,7 +193,7 @@ h2 {
   margin: 1rem 0;
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
 }
-.restaurants article .new {
+.resto article .new {
   width: 5rem;
   height: 1.8rem;
   position: absolute;
@@ -205,102 +205,103 @@ h2 {
   line-height: 1.8rem;
   border-radius: 2px;
 }
-.restaurants article img {
+.resto article img {
   height: 14.45rem;
   object-fit: cover;
 }
-.restaurants article .content-articles {
+.resto article .content-articles {
   padding: 1rem;
 }
-.restaurants article .content-articles h3 {
+.resto article .content-articles h3 {
   font-size: 1.12rem;
   font-weight: 700;
 }
-.restaurants article .content-articles p {
+.resto article .content-articles p {
   font-weight: 300;
 }
-.restaurants article .fa-heart {
+.resto article .fa-heart {
   font-size: 1.5rem;
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
 }
 @media (min-width: 767px) {
-  .restaurants .resto-wrapper-cards {
+  .resto .resto-wrapper {
     justify-content: space-between;
   }
-  .restaurants .resto-wrapper-cards h2 {
+  .resto .resto-wrapper h2 {
     width: 100%;
   }
-  .restaurants .resto-wrapper-cards article {
+  .resto .resto-wrapper article {
     width: 48%;
   }
 }
 
 /* --Resto pages-- */
-.resto_page img {
+.resto-page img {
   height: 275px;
   object-fit: cover;
 }
-.resto_page .menu-card {
+.resto-page .menu-card {
   background: #F6F6F6;
   border-radius: 40px 40px 0 0;
   max-width: 1440px;
   margin: -20px auto 0 auto;
   border: 3px solid red;
 }
-.resto_page .menu-card .resto_title {
+.resto-page .menu-card .resto-title {
   max-width: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.resto_page .menu-card .resto_title h1 {
+.resto-page .menu-card .resto-title h1 {
   font-family: "Shrikhand", cursive;
 }
-.resto_page .menu-card .resto_title h1, .resto_page .menu-card .resto_title .fa-heart {
+.resto-page .menu-card .resto-title h1, .resto-page .menu-card .resto-title .fa-heart {
   font-size: 28px;
   margin: 1rem 0;
 }
 @media (min-width: 767px) {
-  .resto_page .menu-card .resto_title {
+  .resto-page .menu-card .resto-title {
     margin: 1rem auto;
   }
 }
-.resto_page .menu-card form {
+.resto-page .menu-card form {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
 }
-.resto_page .menu-card form fieldset {
+.resto-page .menu-card form fieldset {
   padding: 1.5rem 0;
 }
-.resto_page .menu-card form legend hr {
+.resto-page .menu-card form legend hr {
   width: 40px;
   height: 3px;
   border: none;
   background: #99E2D0;
   margin: 0.25rem 0 0 0;
 }
-.resto_page .menu-card form .form_card {
+.resto-page .menu-card form .form-card {
   width: 100%;
   background: white;
   margin: 1rem 0;
   padding: 1rem;
   border-radius: 15px;
   position: relative;
+  overflow: hidden;
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
 }
-.resto_page .menu-card form .form_card label {
+.resto-page .menu-card form .form-card label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.resto_page .menu-card form .form_card h2 {
+.resto-page .menu-card form .form-card h2 {
   margin: 0 0 0.5rem 0;
   width: 100%;
 }
-.resto_page .menu-card form .form_card input[type=checkbox] {
+.resto-page .menu-card form .form-card input[type=checkbox] {
   position: absolute;
   top: 0;
   right: -100px;
@@ -308,7 +309,7 @@ h2 {
   width: 90px;
   height: 100%;
 }
-.resto_page .menu-card form .order {
+.resto-page .menu-card form .order {
   width: 218px;
   height: 50px;
   display: flex;

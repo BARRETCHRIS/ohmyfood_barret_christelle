@@ -12,5 +12,7 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
 ### comentaires SASS  
 **Notes de correction** chercher !NB! dans default.scss  
   
-NB: corriger les hearts sur toutes les pages, passage de span à button.
+NB: Page resto, passer les image en background du main ou d'une autre div.
+
+NB: Balise a sur page resto, faire modif du href:"#"
 

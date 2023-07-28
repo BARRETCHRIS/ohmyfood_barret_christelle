@@ -1,4 +1,5 @@
 
+@charset "utf-8";
 // ##VARIBLES
 // Color
 $bg-content: #F6F6F6;
@@ -67,7 +68,7 @@ nav{
 }
 // --Home Page--
 /* --Home Page-- */
-.home_page h2, .home_page h3{ 
+.home-page h2, .home-page h3{ 
     font-weight: 700;
 }
 
@@ -108,7 +109,7 @@ h2{
 /* --Home Page-- */
 
 //!NB! pb gestion position du btn à screan 280px, peut etre pb du au padding, voir modif avec width sur chaque élément
-.sub_header{
+.sub-header{
     background: $bg-content;
     text-align: center;
     padding: 1.5rem 20%;
@@ -142,7 +143,7 @@ h2{
 
 }
 
-.use_steps{
+.use-steps{
     list-style-position: inside;
 
     ol{padding-left: 0.5rem; list-style: none;}
@@ -190,10 +191,10 @@ h2{
     }
 }
 
-.restaurants{
+.resto{
     background: $bg-content;
 
-    .resto-wrapper-cards{
+    .resto-wrapper{
         max-width: 1080px;
         margin: 0 auto;
         display: flex;
@@ -241,7 +242,7 @@ h2{
     }
 
     @media (min-width: 767px){
-        .resto-wrapper-cards{
+        .resto-wrapper{
             justify-content: space-between;
             h2{width: 100%;}
             article{
@@ -254,7 +255,7 @@ h2{
 // --Resto pages--
 /* --Resto pages-- */
 
-.resto_page{
+.resto-page{
     img{
         height: 275px;
         object-fit: cover;
@@ -269,7 +270,7 @@ h2{
         margin: -20px auto 0 auto;
         border: 3px solid red;
 
-        .resto_title{
+        .resto-title{
             max-width: 350px;
             display: flex;
             justify-content: space-between;
@@ -308,14 +309,14 @@ h2{
                 }
             }
 
-            .form_card{
+            .form-card{
                 width: 100%;
                 background: white;
                 margin: 1rem 0;
                 padding: 1rem;
                 border-radius: 15px;
                 position: relative;
-                //overflow: hidden;
+                overflow: hidden;
 
                 @include shadow;
 
@@ -333,6 +334,7 @@ h2{
                 }
 
                 input[type="checkbox"]{
+                    //display: none;
                     position: absolute;
                     top: 0;
                     right: -100px;

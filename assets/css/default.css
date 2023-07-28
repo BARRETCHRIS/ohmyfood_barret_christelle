@@ -298,10 +298,9 @@ h2 {
 }
 .resto_page .menu-card form .form_card h2 {
   margin: 0 0 0.5rem 0;
-  max-width: 100%;
-  min-width: 75%;
+  width: 100%;
 }
-.resto_page .menu-card form .form_card input {
+.resto_page .menu-card form .form_card input[type=checkbox] {
   position: absolute;
   top: 0;
   right: -100px;

@@ -327,11 +327,12 @@ h2{
 
                 h2{
                     margin: 0 0 0.5rem 0;
-                    max-width: 100%;
-                    min-width: 75%;
+                    width: 100%;
+                    //max-width: 100%;
+                    //min-width: 75%;
                 }
 
-                input{
+                input[type="checkbox"]{
                     position: absolute;
                     top: 0;
                     right: -100px;

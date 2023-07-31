@@ -34,7 +34,7 @@ body{
 }
 
 section, footer{
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
 }
 
 
@@ -256,19 +256,26 @@ h2{
 /* --Resto pages-- */
 
 .resto-page{
-    img{
-        height: 275px;
-        object-fit: cover;
-        
-       
+
+    .resto-img{
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
     }
+    
+    .palette-gout{
+        background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);   
+    }
+
+    
 
     .menu-card{
         background: $bg-content;
         border-radius: 40px 40px 0 0;
-        max-width: 1440px;
-        margin: -20px auto 0 auto;
-        border: 3px solid red;
+        max-width: 1080px;
+        margin: -40px auto 0 auto;
+        //border: 3px solid red;
 
         .resto-title{
             max-width: 350px;
@@ -294,11 +301,11 @@ h2{
             margin: 0 auto;
 
             fieldset{
-                padding: 1.5rem 0;
+                margin: 0.5rem 0;
             }
 
             legend{
-                //margin: 0.5rem 0;
+                margin: 0.5rem 0;
 
                 hr{
                     width: 40px;
@@ -315,15 +322,25 @@ h2{
                 margin: 1rem 0;
                 padding: 1rem;
                 border-radius: 15px;
-                position: relative;
+                position: relative;//à neutraliser avec le !NB! ci-dessous l.321
                 overflow: hidden;
+
+/*//!NB! essai mise en place pour animation checkbox
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;//fin !NB!*/
 
                 @include shadow;
 
                 label{
+                    max-width: 100%;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
+
+                    :nth-child(2){
+                        font-weight: 300;
+                    }
                 }
 
                 h2{
@@ -333,24 +350,27 @@ h2{
                     //min-width: 75%;
                 }
 
+               
+
                 input[type="checkbox"]{
-                    //display: none;
-                    position: absolute;
+                    display: none;//à neutraliser avec le !NB! ci-dessus l.321
+                    position: absolute;//à neutraliser avec le !NB! ci-dessus l.321
+                    position: relative;
                     top: 0;
                     right: -100px;
                     box-shadow: none;
                     width: 90px;
                     height: 100%;
-                }
-               
+                }   
             }
+            
             .order{
                 width: 218px;
                 height: 50px;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                margin: 1rem auto;
+                margin: 2.5rem auto;
                 color: white;
                 background: $gradient;
                 border-radius: 50px; 
@@ -360,9 +380,6 @@ h2{
         }
     }
 }
-
-
-
 
 
 // Footer

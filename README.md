@@ -14,5 +14,5 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
   
 NB: Page resto, passer les image en background du main ou d'une autre div.
 
-NB: Balise a sur page resto, faire modif du href:"#"
+
 

@@ -28,7 +28,7 @@ body {
 }
 
 section, footer {
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
 /* --HEADER-- */
@@ -238,16 +238,20 @@ h2 {
 }
 
 /* --Resto pages-- */
-.resto-page img {
-  height: 275px;
-  object-fit: cover;
+.resto-page .resto-img {
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.resto-page .palette-gout {
+  background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 .resto-page .menu-card {
   background: #F6F6F6;
   border-radius: 40px 40px 0 0;
-  max-width: 1440px;
-  margin: -20px auto 0 auto;
-  border: 3px solid red;
+  max-width: 1080px;
+  margin: -40px auto 0 auto;
 }
 .resto-page .menu-card .resto-title {
   max-width: 350px;
@@ -273,7 +277,10 @@ h2 {
   margin: 0 auto;
 }
 .resto-page .menu-card form fieldset {
-  padding: 1.5rem 0;
+  margin: 0.5rem 0;
+}
+.resto-page .menu-card form legend {
+  margin: 0.5rem 0;
 }
 .resto-page .menu-card form legend hr {
   width: 40px;
@@ -290,19 +297,29 @@ h2 {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  /*//!NB! essai mise en place pour animation checkbox
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;//fin !NB!*/
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
 }
 .resto-page .menu-card form .form-card label {
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.resto-page .menu-card form .form-card label :nth-child(2) {
+  font-weight: 300;
 }
 .resto-page .menu-card form .form-card h2 {
   margin: 0 0 0.5rem 0;
   width: 100%;
 }
 .resto-page .menu-card form .form-card input[type=checkbox] {
+  display: none;
   position: absolute;
+  position: relative;
   top: 0;
   right: -100px;
   box-shadow: none;
@@ -315,7 +332,7 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem auto;
+  margin: 2.5rem auto;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;

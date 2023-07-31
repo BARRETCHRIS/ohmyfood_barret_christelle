@@ -95,7 +95,6 @@ h2 {
 .sub-header {
   background: #F6F6F6;
   text-align: center;
-  padding: 1.5rem 20%;
   /* Hook restaurant*/
 }
 .sub-header h1 {
@@ -114,7 +113,8 @@ h2 {
   margin: 1rem 0;
 }
 .sub-header a {
-  width: 218px;
+  width: 100%;
+  max-width: 218px;
   height: 50px;
   display: flex;
   justify-content: space-around;
@@ -135,7 +135,7 @@ h2 {
 }
 .use-steps li {
   width: 100%;
-  height: 50px;
+  height: 72.5px;
   border-radius: 20px;
   background: #F6F6F6;
   display: flex;
@@ -143,6 +143,22 @@ h2 {
   padding: 0 1rem;
   margin: 1.5rem 0;
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+  /*
+  li::marker{
+
+      list-style-type: georgian;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      color: white;
+      background: $home-adjust-color;
+      text-align: center;
+      line-height: 1.55rem;
+      position: relative;
+      left: -1.5rem;
+
+  }
+  */
 }
 .use-steps li span {
   width: 25px;
@@ -153,7 +169,7 @@ h2 {
   text-align: center;
   line-height: 1.55rem;
   position: relative;
-  left: -1.5rem;
+  left: -1.75rem;
 }
 .use-steps li i {
   margin-right: 1.5rem;
@@ -244,16 +260,16 @@ h2 {
   background-position: center;
   background-size: cover;
 }
-.resto-page .palette-gout {
+.resto-page.palette-gout {
   background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
-.resto-page .note-enchant {
+.resto-page.note-enchant {
   background-image: url(../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
-.resto-page .delice-sens {
+.resto-page.delice-sens {
   background-image: url(../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
-.resto-page .a-la-francaise {
+.resto-page.a-la-francaise {
   background-image: url(../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 .resto-page .menu-card {

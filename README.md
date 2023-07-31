@@ -12,7 +12,7 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
 ### comentaires SASS  
 **Notes de correction** chercher !NB! dans default.scss  
   
-NB: Page resto, passer les image en background du main ou d'une autre div.
+NB: Gérer l'apparence des puce liste ol dans index.html.
 
 
 

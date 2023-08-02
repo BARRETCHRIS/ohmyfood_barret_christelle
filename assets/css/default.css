@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-img, picture, video, canvas, svg {
+img, svg {
   display: block;
   width: 100%;
 }
@@ -31,6 +31,11 @@ section, footer {
   padding: 1.5rem 1rem;
 }
 
+h2 {
+  font-size: 24px;
+  margin: 1rem 0;
+}
+
 /* --HEADER-- */
 nav {
   width: 100%;
@@ -38,17 +43,38 @@ nav {
   min-height: 4rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 nav img {
-  height: 36px;
-  margin: 0 0 1rem 0;
-}
-nav img.home-logo {
+  max-height: 36px;
   margin: 1rem 0;
 }
+nav .home-form {
+  background: #EAEAEA;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+nav .home-form form {
+  width: 9.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+nav .home-form form input {
+  padding-right: 0.6rem;
+  width: 90%;
+}
+nav .home-form form input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+  text-align: right;
+}
 nav .return-home {
-  position: relative;
-  top: 1.7rem;
+  position: absolute;
+  top: 1.6rem;
   left: 1rem;
 }
 nav .return-home .fa-arrow-left {
@@ -56,84 +82,60 @@ nav .return-home .fa-arrow-left {
   font-weight: 700;
 }
 
-/* --Home Page-- */
-.home-page h2, .home-page h3 {
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 24px;
-  margin: 1rem 0;
-}
-
-.home-form {
-  background: #EAEAEA;
-  display: flex;
-  justify-content: space-around;
-  padding: 15px 0;
-  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-.home-form div {
-  width: 9.5rem;
-  display: flex;
-  justify-content: space-between;
-}
-.home-form div input {
-  padding-right: 0.6rem;
-  width: 90%;
-}
-.home-form div input::placeholder {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: black;
-  text-align: right;
-}
-
 /*  ##MAIN## */
 /* --Home Page-- */
-.sub-header {
+.home h2, .home h3 {
+  font-weight: 700;
+}
+
+.home__blurb {
   background: #F6F6F6;
   text-align: center;
   /* Hook restaurant*/
 }
-.sub-header h1 {
+.home__blurb h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1rem 0;
 }
 @media (min-width: 767px) {
-  .sub-header h1 {
+  .home__blurb h1 {
     font-size: 2.5rem;
   }
 }
-.sub-header p {
+.home__blurb p {
   font-size: 1.12rem;
   font-weight: 300;
   margin: 1rem 0;
 }
-.sub-header a {
+.home__blurb a {
   width: 100%;
   max-width: 218px;
   height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem auto;
+  margin: 2rem auto 1rem auto;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  scale: 1;
+  transition: scale 200ms;
+}
+.home__blurb a:hover {
+  scale: 1.02;
+  background: lightless(linear-gradient(#FF79DA, #9356DC));
 }
 
-.use-steps {
+.home__steps {
   list-style-position: inside;
 }
-.use-steps ol {
+.home__steps ol {
   padding-left: 0.5rem;
   list-style: none;
 }
-.use-steps li {
+.home__steps li {
   width: 100%;
   height: 72.5px;
   border-radius: 20px;
@@ -142,7 +144,7 @@ h2 {
   align-items: center;
   padding: 0 1rem;
   margin: 1.5rem 0;
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   /*
   li::marker{
 
@@ -160,7 +162,7 @@ h2 {
   }
   */
 }
-.use-steps li span {
+.home__steps li span {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -171,45 +173,45 @@ h2 {
   position: relative;
   left: -1.75rem;
 }
-.use-steps li i {
+.home__steps li i {
   margin-right: 1.5rem;
 }
-.use-steps li .fa-store {
+.home__steps li .fa-store {
   color: #9356DC;
 }
 @media (min-width: 767px) {
-  .use-steps {
+  .home__steps {
     max-width: 1080px;
     margin: 0 auto;
   }
-  .use-steps ol {
+  .home__steps ol {
     display: flex;
     justify-content: space-between;
   }
-  .use-steps ol li {
+  .home__steps ol li {
     width: 31%;
   }
 }
 
-.resto {
+.home__resto {
   background: #F6F6F6;
 }
-.resto .resto-wrapper {
+.home__resto__wrapper {
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
-.resto article {
+.home__resto article {
   width: 100%;
   border-radius: 25px;
   overflow: hidden;
   position: relative;
   background: white;
   margin: 1rem 0;
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-.resto article .new {
+.home__resto article .flag__new {
   width: 5rem;
   height: 1.8rem;
   position: absolute;
@@ -221,34 +223,34 @@ h2 {
   line-height: 1.8rem;
   border-radius: 2px;
 }
-.resto article img {
+.home__resto article img {
   height: 14.45rem;
   object-fit: cover;
 }
-.resto article .content-articles {
+.home__resto article .home__article__txt {
   padding: 1rem;
 }
-.resto article .content-articles h3 {
+.home__resto article .home__article__txt h3 {
   font-size: 1.12rem;
   font-weight: 700;
 }
-.resto article .content-articles p {
+.home__resto article .home__article__txt p {
   font-weight: 300;
 }
-.resto article .fa-heart {
+.home__resto article .fa-heart {
   font-size: 1.5rem;
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
 }
 @media (min-width: 767px) {
-  .resto .resto-wrapper {
+  .home__resto__wrapper {
     justify-content: space-between;
   }
-  .resto .resto-wrapper h2 {
+  .home__resto__wrapper h2 {
     width: 100%;
   }
-  .resto .resto-wrapper article {
+  .home__resto__wrapper article {
     width: 48%;
   }
 }
@@ -261,20 +263,16 @@ h2 {
   background-size: cover;
 }
 .resto-page .palette-gout {
-  /*height: 400px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;*/
-  background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url("../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 .resto-page .note-enchant {
-  background-image: url(../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url("../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 .resto-page .delice-sens {
-  background-image: url(../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-image: url("../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .resto-page .a-la-francaise {
-  background-image: url(../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 .resto-page .menu-card {
   background: #F6F6F6;
@@ -330,7 +328,7 @@ h2 {
                   display: flex;
                   flex-direction: row;
                   flex-wrap: nowrap;//fin !NB!*/
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .resto-page .menu-card form .form-card label {
   max-width: 100%;
@@ -365,7 +363,7 @@ h2 {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -394,16 +392,14 @@ footer dl {
 }
 footer dt {
   margin: 1rem 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.4rem;
 }
 footer dd {
   margin: 0.4rem 0;
 }
 footer a {
   color: white;
-}
-footer a.footer-title {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.4rem;
 }
 footer a .fa-utensils, footer a .fa-handshake-angle {
   margin-right: 0.5rem;

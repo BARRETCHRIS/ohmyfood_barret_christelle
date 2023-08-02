@@ -109,11 +109,12 @@ nav{
     border-radius: 50px; 
         
     @include shadow;
+    transition: 400ms;
 
     &:hover{
-        scale: 1.02;
-        //box-shadow: 0 8px 6px rgba(0, 0, 0, .2);
-        background: lightless($gradient);
+        scale: 1.01;
+        
+        
     }
 }
 
@@ -241,6 +242,93 @@ nav{
             bottom: 1.5rem;
             right: 1.5rem;
         }
+
+        //test avec svg
+        /*
+        svg#heart {
+            height: 250px;
+            width: 250px;
+            }
+
+            #heart-path {
+            fill: red;
+            stroke: pink;
+            stroke-width: 1px;
+            stroke-dasharray: 125;
+            stroke-dashoffset: -125;
+            stroke-linecap: butt;
+            -webkit-transition: all 2s ease-out;
+            -moz-transition: all 2s ease-out;
+            -ms-transition: all 2s ease-out;
+            -o-transition: all 2s ease-out;
+            transition: all 2s ease-out;
+            }
+
+            #heart-path:hover {
+            fill: pink;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 125;
+            }
+
+            svg#circle {
+            height: 250px;
+            width: 250px;
+            }
+
+            circle {
+            stroke-dasharray: 700;
+            stroke-dashoffset: 700;
+            stroke-linecap: butt;
+            -webkit-transition: all 2s ease-out;
+            -moz-transition: all 2s ease-out;
+            -ms-transition: all 2s ease-out;
+            -o-transition: all 2s ease-out;
+            transition: all 2s ease-out;
+            }
+
+            circle:hover {
+            fill: pink;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 700;
+            stroke-width: 10;
+            }
+        */
+
+        /*.fa-heart :hover{
+            
+            background: center / cover $gradient;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }*/     
+    
+        //prépa anim heart try1
+         /*.heart{
+            width: 1.5rem;
+            height: 1.5rem;
+            background: red;
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            transform: rotate(45deg);
+
+            &__right{
+                width: 100%;
+                height: 100%;
+                background: blue;
+                border-radius: 50%;
+                position: absolute;
+                top: -0.75rem;
+            }
+            &__left{
+                width: 100%;
+                height: 100%;
+                background: yellow;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: -0.75rem;
+            }
+        }*/
     }
 
     @media (min-width: 767px){

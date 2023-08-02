@@ -14,5 +14,9 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
   
 NB: Gérer l'apparence des puce liste ol dans index.html.
 
+NB: remplacer fa-heart par svg fa pour animation
+
+
+
 
 

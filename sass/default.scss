@@ -40,7 +40,7 @@ section, footer{
 
 h2{
     font-size: 24px;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
 }
 // --HEADER--
 /* --HEADER-- */
@@ -94,6 +94,28 @@ nav{
     }
     
 }
+// --SPECIALS ELEMENTS--
+/* --SPECIALS ELEMENTS-- */
+
+.btn, .order{
+    width: 218px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2.5rem auto;
+    color: white;
+    background: $gradient;
+    border-radius: 50px; 
+        
+    @include shadow;
+
+    &:hover{
+        scale: 1.02;
+        //box-shadow: 0 8px 6px rgba(0, 0, 0, .2);
+        background: lightless($gradient);
+    }
+}
 
 // ##MAIN
 /*  ##MAIN## */
@@ -119,37 +141,10 @@ nav{
     }
 
     p{font-size: 1.12rem; font-weight: 300;margin: 1rem 0;}
-
-    /* Hook restaurant*/
-    a{
-        width: 100%;
-        max-width: 218px;
-        height: 50px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 2rem auto 1rem auto;
-        color: white;
-        background: $gradient;
-        border-radius: 50px; 
-        @include shadow;
-        scale: 1;
-        transition: scale 200ms;
-    }
-    a:hover{
-        scale: 1.02;
-        //box-shadow: 0 8px 6px rgba(0, 0, 0, .2);
-        background: lightless($gradient);
-        
-
-    }
-
 }
 
 .home__steps{
-    list-style-position: inside;
-
-    ol{padding-left: 0.5rem; list-style: none;}
+    ol{padding-right: 1rem;}
 
     li {
     width: 100%;
@@ -158,45 +153,30 @@ nav{
     background: $bg-content;
     display: flex;
     align-items: center;
-    padding: 0 1rem;
-    margin: 1.5rem 0 ;
+    padding: 0 0.5rem;
+    margin: 1.5rem 0 1.5rem 0.5rem;
+
+    @media (min-width: 768px) {
+        margin: 0;
+    }
 
     @include shadow;
 
     span{
-        width: 25px;
-        height: 25px;
+        width: 1.5rem;
+        height: 1.5rem;
         border-radius: 50%;
         color: white;
         background: $home-adjust-color;
         text-align: center;
-        line-height: 1.55rem;
-        position: relative;
-        left: -1.75rem;
+        line-height: 1.50rem;
+        margin: 0 1rem 0 -1.25rem;
     }
-    /*
-    li::marker{
-        
-        list-style-type: georgian;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        color: white;
-        background: $home-adjust-color;
-        text-align: center;
-        line-height: 1.55rem;
-        position: relative;
-        left: -1.5rem;
-
-    }
-    */
 
     i{margin-right: 1.5rem;}
     .fa-store{color: $home-adjust-color;}
     
     }
-
-    
 
     @media (min-width: 767px){
         max-width: 1080px;
@@ -205,12 +185,13 @@ nav{
         ol{
             display: flex;
             justify-content: space-between;
+            padding-right: 0;
 
             li{width: 31%;}
         
         }
     }
-}
+} 
 
 .home__resto{
     background: $bg-content;
@@ -398,7 +379,7 @@ nav{
                 }   
             }
             
-            .order{
+            /*.order{
                 width: 218px;
                 height: 50px;
                 display: flex;
@@ -410,7 +391,7 @@ nav{
                 border-radius: 50px; 
         
                 @include shadow;
-            }
+            }*/
         }
     }
 }

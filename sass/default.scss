@@ -97,24 +97,24 @@ nav{
 // --SPECIALS ELEMENTS--
 /* --SPECIALS ELEMENTS-- */
 
-.btn, .order{
+.btn{
     width: 218px;
     height: 50px;
+    background: $gradient;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 2.5rem auto;
-    color: white;
-    background: $gradient;
-    border-radius: 50px; 
-        
+    opacity: 1;
     @include shadow;
     transition: 400ms;
 
     &:hover{
-        scale: 1.01;
-        
-        
+        scale: 1.005;
+        opacity: 0.75;    
     }
 }
 
@@ -236,99 +236,36 @@ nav{
             p{font-weight: 300;}
         }
 
-        .fa-heart{
+        /*.fa-heart{
             font-size: 1.5rem;
             position: absolute;
             bottom: 1.5rem;
             right: 1.5rem;
-        }
+        }*/
 
-        //test avec svg
-        /*
-        svg#heart {
-            height: 250px;
-            width: 250px;
-            }
-
-            #heart-path {
-            fill: red;
-            stroke: pink;
-            stroke-width: 1px;
-            stroke-dasharray: 125;
-            stroke-dashoffset: -125;
-            stroke-linecap: butt;
-            -webkit-transition: all 2s ease-out;
-            -moz-transition: all 2s ease-out;
-            -ms-transition: all 2s ease-out;
-            -o-transition: all 2s ease-out;
-            transition: all 2s ease-out;
-            }
-
-            #heart-path:hover {
-            fill: pink;
-            stroke-dashoffset: 0;
-            stroke-dasharray: 125;
-            }
-
-            svg#circle {
-            height: 250px;
-            width: 250px;
-            }
-
-            circle {
-            stroke-dasharray: 700;
-            stroke-dashoffset: 700;
-            stroke-linecap: butt;
-            -webkit-transition: all 2s ease-out;
-            -moz-transition: all 2s ease-out;
-            -ms-transition: all 2s ease-out;
-            -o-transition: all 2s ease-out;
-            transition: all 2s ease-out;
-            }
-
-            circle:hover {
-            fill: pink;
-            stroke-dashoffset: 0;
-            stroke-dasharray: 700;
-            stroke-width: 10;
-            }
-        */
-
-        /*.fa-heart :hover{
-            
-            background: center / cover $gradient;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }*/     
-    
-        //prépa anim heart try1
-         /*.heart{
-            width: 1.5rem;
-            height: 1.5rem;
-            background: red;
+        .heart{
             position: absolute;
             bottom: 1.5rem;
             right: 1.5rem;
-            transform: rotate(45deg);
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            //background: linear-gradient(135deg, #9356DC,#FF79DA);
+            //rotate: 45deg;
 
-            &__right{
-                width: 100%;
-                height: 100%;
-                background: blue;
-                border-radius: 50%;
-                position: absolute;
-                top: -0.75rem;
-            }
-            &__left{
-                width: 100%;
-                height: 100%;
-                background: yellow;
-                border-radius: 50%;
-                position: absolute;
-                top: 0;
-                left: -0.75rem;
-            }
-        }*/
+            &:before, &:after{
+                content: '';
+                width: 20px;
+                height: 30px;
+                background-color: blue;
+                //background: linear-gradient(135deg, #9356DC,#FF79DA);
+                position: relative;
+                top: 20px;
+            }   
+        }       
+
+        
+
     }
 
     @media (min-width: 767px){
@@ -378,8 +315,7 @@ nav{
         border-radius: 40px 40px 0 0;
         max-width: 1080px;
         margin: -40px auto 0 auto;
-        //border: 3px solid red;
-
+    
         .resto-title{
             max-width: 350px;
             display: flex;
@@ -449,8 +385,6 @@ nav{
                 h2{
                     margin: 0 0 0.5rem 0;
                     width: 100%;
-                    //max-width: 100%;
-                    //min-width: 75%;
                 }
 
                
@@ -466,20 +400,6 @@ nav{
                     height: 100%;
                 }   
             }
-            
-            /*.order{
-                width: 218px;
-                height: 50px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin: 2.5rem auto;
-                color: white;
-                background: $gradient;
-                border-radius: 50px; 
-        
-                @include shadow;
-            }*/
         }
     }
 }
@@ -538,10 +458,5 @@ footer{
         }    
     }    
 }
-
-
-
-
-
 
 

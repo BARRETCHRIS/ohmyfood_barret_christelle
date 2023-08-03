@@ -83,21 +83,24 @@ nav .return-home .fa-arrow-left {
 }
 
 /* --SPECIALS ELEMENTS-- */
-.btn, .order {
+.btn {
   width: 218px;
   height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 2.5rem auto;
-  color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 50px;
+  opacity: 1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: 400ms;
 }
-.btn:hover, .order:hover {
-  scale: 1.01;
+.btn:hover {
+  scale: 1.005;
+  opacity: 0.75;
 }
 
 /*  ##MAIN## */
@@ -193,87 +196,11 @@ nav .return-home .fa-arrow-left {
   background: white;
   margin: 1rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  /*
-  svg#heart {
-      height: 250px;
-      width: 250px;
-      }
-
-      #heart-path {
-      fill: red;
-      stroke: pink;
-      stroke-width: 1px;
-      stroke-dasharray: 125;
-      stroke-dashoffset: -125;
-      stroke-linecap: butt;
-      -webkit-transition: all 2s ease-out;
-      -moz-transition: all 2s ease-out;
-      -ms-transition: all 2s ease-out;
-      -o-transition: all 2s ease-out;
-      transition: all 2s ease-out;
-      }
-
-      #heart-path:hover {
-      fill: pink;
-      stroke-dashoffset: 0;
-      stroke-dasharray: 125;
-      }
-
-      svg#circle {
-      height: 250px;
-      width: 250px;
-      }
-
-      circle {
-      stroke-dasharray: 700;
-      stroke-dashoffset: 700;
-      stroke-linecap: butt;
-      -webkit-transition: all 2s ease-out;
-      -moz-transition: all 2s ease-out;
-      -ms-transition: all 2s ease-out;
-      -o-transition: all 2s ease-out;
-      transition: all 2s ease-out;
-      }
-
-      circle:hover {
-      fill: pink;
-      stroke-dashoffset: 0;
-      stroke-dasharray: 700;
-      stroke-width: 10;
-      }
-  */
-  /*.fa-heart :hover{
-
-      background: center / cover $gradient;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }*/
-  /*.heart{
-      width: 1.5rem;
-      height: 1.5rem;
-      background: red;
+  /*.fa-heart{
+      font-size: 1.5rem;
       position: absolute;
       bottom: 1.5rem;
       right: 1.5rem;
-      transform: rotate(45deg);
-
-      &__right{
-          width: 100%;
-          height: 100%;
-          background: blue;
-          border-radius: 50%;
-          position: absolute;
-          top: -0.75rem;
-      }
-      &__left{
-          width: 100%;
-          height: 100%;
-          background: yellow;
-          border-radius: 50%;
-          position: absolute;
-          top: 0;
-          left: -0.75rem;
-      }
   }*/
 }
 .home__resto article .flag__new {
@@ -302,11 +229,21 @@ nav .return-home .fa-arrow-left {
 .home__resto article .home__article__txt p {
   font-weight: 300;
 }
-.home__resto article .fa-heart {
-  font-size: 1.5rem;
+.home__resto article .heart {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
+.home__resto article .heart:before, .home__resto article .heart:after {
+  content: "";
+  width: 20px;
+  height: 30px;
+  background-color: blue;
+  position: relative;
+  top: 20px;
 }
 @media (min-width: 767px) {
   .home__resto__wrapper {
@@ -367,19 +304,6 @@ nav .return-home .fa-arrow-left {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
-  /*.order{
-      width: 218px;
-      height: 50px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 2.5rem auto;
-      color: white;
-      background: $gradient;
-      border-radius: 50px; 
-
-      @include shadow;
-  }*/
 }
 .resto-page .menu-card form fieldset {
   margin: 0.5rem 0;

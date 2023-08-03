@@ -100,7 +100,60 @@ nav .return-home .fa-arrow-left {
 }
 .btn:hover {
   scale: 1.005;
-  opacity: 0.75;
+  opacity: 0.85;
+}
+
+.heart {
+  /*position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;*/
+  width: 25px;
+  height: 25px;
+  background-color: white;
+}
+.heart__left, .heart__right, .heart__whiteleft, .heart__whiteright {
+  width: 60%;
+  height: 95%;
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.heart__left, .heart__right {
+  border: 2px solid black;
+}
+.heart__left, .heart__whiteleft {
+  transform: rotate(-45.3deg);
+  left: 7.174%;
+  top: -7.8%;
+}
+.heart__right, .heart__whiteright {
+  transform: rotate(45deg);
+  right: 7.17%;
+  top: -7.8%;
+}
+.heart__whiteleft, .heart__whiteright {
+  background: white;
+  width: 50%;
+  height: 85%;
+}
+.heart__whiteleft {
+  left: 12%;
+  top: -2%;
+}
+.heart__whiteright {
+  right: 11.5%;
+  top: -3.43%;
+}
+.heart:hover .heart__left {
+  background: linear-gradient(45deg, #FF79DA, #9356DC);
+  border: none;
+}
+.heart:hover .heart__right {
+  background: linear-gradient(-45deg, #FF79DA, #9356DC);
+  border: none;
+}
+.heart:hover .heart__whiteleft, .heart:hover .heart__whiteright {
+  display: none;
 }
 
 /*  ##MAIN## */
@@ -196,12 +249,6 @@ nav .return-home .fa-arrow-left {
   background: white;
   margin: 1rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  /*.fa-heart{
-      font-size: 1.5rem;
-      position: absolute;
-      bottom: 1.5rem;
-      right: 1.5rem;
-  }*/
 }
 .home__resto article .flag__new {
   width: 5rem;
@@ -231,19 +278,8 @@ nav .return-home .fa-arrow-left {
 }
 .home__resto article .heart {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 2rem;
   right: 1.5rem;
-  width: 40px;
-  height: 40px;
-  background-color: red;
-}
-.home__resto article .heart:before, .home__resto article .heart:after {
-  content: "";
-  width: 20px;
-  height: 30px;
-  background-color: blue;
-  position: relative;
-  top: 20px;
 }
 @media (min-width: 767px) {
   .home__resto__wrapper {
@@ -283,7 +319,7 @@ nav .return-home .fa-arrow-left {
   margin: -40px auto 0 auto;
 }
 .resto-page .menu-card .resto-title {
-  max-width: 350px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -291,13 +327,17 @@ nav .return-home .fa-arrow-left {
 .resto-page .menu-card .resto-title h1 {
   font-family: "Shrikhand", cursive;
 }
-.resto-page .menu-card .resto-title h1, .resto-page .menu-card .resto-title .fa-heart {
+.resto-page .menu-card .resto-title h1 {
   font-size: 28px;
   margin: 1rem 0;
+}
+.resto-page .menu-card .resto-title .heart {
+  position: relative;
 }
 @media (min-width: 767px) {
   .resto-page .menu-card .resto-title {
     margin: 1rem auto;
+    max-width: 350px;
   }
 }
 .resto-page .menu-card form {

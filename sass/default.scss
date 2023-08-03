@@ -114,9 +114,76 @@ nav{
 
     &:hover{
         scale: 1.005;
-        opacity: 0.75;    
+        opacity: 0.85;    
     }
 }
+
+.heart{
+    /*position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;*/
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    //border: 4px solid red;
+    
+    &__left, &__right, &__whiteleft, &__whiteright{
+        width: 60%;
+        height: 95%;
+        position: absolute;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;   
+    }
+
+    &__left, &__right{
+        border: 2px solid black;
+    }
+
+    &__left, &__whiteleft{
+        //background: blue;
+        transform: rotate(-45.3deg);
+        left: 7.174%;
+        //border-right: black;
+        top: -7.8%;
+    }
+    
+    &__right, &__whiteright{
+        //background: yellow;
+        transform: rotate(45deg);
+        right: 7.17%;
+        //border-left: black;
+        top: -7.8%;        
+    }
+
+    &__whiteleft, &__whiteright{
+        background: white;
+        width: 50%;
+        height: 85%;
+    }
+    &__whiteleft{
+        //background: red;
+        left: 12%;
+        top: -2%;
+    }
+    &__whiteright{
+        //background: green;
+        right: 11.5%;
+        top: -3.43%;
+    }
+    &:hover{
+        .heart__left{
+            background: linear-gradient(45deg, #FF79DA, #9356DC);
+            border: none;
+        }
+        .heart__right{
+            background: linear-gradient(-45deg, #FF79DA, #9356DC);
+            border: none;
+        }
+        .heart__whiteleft, .heart__whiteright{
+            display: none;
+        }
+    }
+} 
 
 // ##MAIN
 /*  ##MAIN## */
@@ -236,36 +303,11 @@ nav{
             p{font-weight: 300;}
         }
 
-        /*.fa-heart{
-            font-size: 1.5rem;
-            position: absolute;
-            bottom: 1.5rem;
-            right: 1.5rem;
-        }*/
-
         .heart{
             position: absolute;
-            bottom: 1.5rem;
+            bottom: 2rem;
             right: 1.5rem;
-            width: 40px;
-            height: 40px;
-            background-color: red;
-            //background: linear-gradient(135deg, #9356DC,#FF79DA);
-            //rotate: 45deg;
-
-            &:before, &:after{
-                content: '';
-                width: 20px;
-                height: 30px;
-                background-color: blue;
-                //background: linear-gradient(135deg, #9356DC,#FF79DA);
-                position: relative;
-                top: 20px;
-            }   
-        }       
-
-        
-
+        }  
     }
 
     @media (min-width: 767px){
@@ -317,20 +359,24 @@ nav{
         margin: -40px auto 0 auto;
     
         .resto-title{
-            max-width: 350px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             h1{ @include theme-font;}
 
-            h1, .fa-heart{
+            h1/*, .fa-heart*/{
                 font-size: 28px;
                 margin: 1rem 0;
+            }
+            .heart{
+                position: relative;    
             }
 
             @media (min-width: 767px){
                 margin: 1rem auto;
+                max-width: 350px;
             }
         }
 

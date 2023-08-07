@@ -101,6 +101,7 @@ nav .return-home .fa-arrow-left {
 .btn:hover {
   scale: 1.005;
   opacity: 0.85;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
 }
 
 .heart__wrap {

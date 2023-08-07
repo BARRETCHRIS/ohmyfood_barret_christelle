@@ -27,13 +27,12 @@
             <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Oh my food écrit en lettre arondies">              
         </nav>
     </header>
-    <main class="resto-page">
-        <div class="resto-img palette-gout"></div>
-        <section class="menu-card">
-            <div class="resto-title">
+    <main class="resto">
+        <div class="resto__img palette_gout"></div>
+        <section class="resto__menu">
+            <div class="resto__menu__title">
                 <h1>La palette du goût</h1>
                 <!--<i class="fa-sharp fa-regular fa-heart"></i>-->
-                
                 <div class="heart__wrap">
                     <div class="heart">
                         <div class="heart__left"></div>
@@ -45,86 +44,104 @@
             <form action="#" method="get">
                 <fieldset>
                     <legend>ENTR&#201;ES<hr></legend>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Fricassée d'escargots</h2>
-                            <span>Au piment d'Espelette</span>
-                            <span>25<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="entreeOne">
+                            <div class="h2">Fricassée d'escargots</div>
+                            <div class="h2__content">
+                                <div>Au piment d'Espelette</div>
+                                <div>25<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input class="checkbox" type="checkbox" id="" name="">
+                        <input class="checkbox" type="checkbox" id="entreeOne" name="entreeOne">
                     </div>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Foie gras de canard mi-cuit</h2>
-                            <span>Et ses copeaux de truffe noire</span>
-                            <span>35<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="entreeTwo">
+                            <div class="h2">Foie gras de canard mi-cuit</div>
+                            <div class="h2__content">
+                                <div>Et ses copeaux de truffe noire</div>
+                                <div>35<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="entreeTwo" name="entreeTwo">
                     </div>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Œuf au plat</h2>
-                            <span>Assaisonné à la truffe sur lit de caviar</span>
-                            <span>20<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="entreeTree">
+                            <div class="h2">Œuf au plat</div>
+                            <div class="h2__content">
+                                <div>Assaisonné à la truffe sur lit de caviar</div>
+                                <div>20<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="entreeTree" name="entreeTree">
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>PLATS<hr></legend>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Filet de bœuf aux herbes</h2>
-                            <span>Accompagné de sa ribambelle de légumes</span>
-                            <span>40<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="mealOne">
+                            <div class="h2">Filet de bœuf aux herbes</div>
+                            <div class="h2__content">
+                                <div>Accompagné de sa ribambelle de légumes</div>
+                                <div>40<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="mealOne" name="mealOne">
                     </div>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Parmentier de queue de bœuf</h2>
-                            <span>À la truffe noire sur sa purée de panais</span>
-                            <span>35<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="mealTwo">
+                            <div class="h2">Parmentier de queue de bœuf</div>
+                            <div class="h2__content">
+                                <div>À la truffe noire sur sa purée de panais</div>
+                                <div>35<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="mealTwo" name="mealTwo">
                     </div>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Filet de turbot</h2>
-                            <span>Aux agrumes</span>
-                            <span>44<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="mealThree">
+                            <div class="h2">Filet de turbot</div>
+                            <div class="h2__content">
+                                <div>Aux agrumes</div>
+                                <div>44<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="mealThree" name="mealThree">
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>DESSERTS<hr></legend>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Paris-Brest</h2>
-                            <span>Revisité</span>
-                            <span>18<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="dessertOne">
+                            <div class="h2">Paris-Brest</div>
+                            <div class="h2__content">
+                                <div>Revisité</div>
+                                <div>18<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="dessertOne" name="dessertOne">
                     </div>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Macaron au chocolat d'exception</h2>
-                            <span>Et glace à la vanille de Madagascar</span>
-                            <span>22<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="dessertTwo">
+                            <div class="h2">Macaron au chocolat d'exception</div>
+                            <div class="h2__content">
+                                <div>Et glace à la vanille de Madagascar</div>
+                                <div>22<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="dessertTwo" name="dessertTwo">
                     </div>
-                    <div class="form-card">
-                        <label for="">
-                            <h2>Mousse au chocolat</h2>
-                            <span>Au piment d'Espelette et à la truffe noire</span>
-                            <span>23<i class="fa-solid fa-euro-sign"></i></span>
+                    <div class="form__card">
+                        <label for="dessertThree">
+                            <div class="h2">Mousse au chocolat</div>
+                            <div class="h2__content">
+                                <div>Au piment d'Espelette et à la truffe noire</div>
+                                <div>23<i class="fa-solid fa-euro-sign"></i></div>
+                            </div>
                         </label>
-                        <input type="checkbox" id="" name="">
+                        <input type="checkbox" id="dessertThree" name="dessertThree">
                     </div>
                 </fieldset>
-                <input type="submit" name="" id="" value="Commander" class="btn">
+                <input type="submit" name="order" id="order" value="Commander" class="btn">
              </form>
         </section>
     </main>

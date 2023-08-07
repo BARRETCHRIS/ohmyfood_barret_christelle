@@ -104,6 +104,87 @@ nav .return-home .fa-arrow-left {
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.2);
 }
 
+/*.favorit{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .heart{
+        //background: yellow;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        top: 3%;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        position: relative;
+        transform: rotate(-135deg);
+        padding-top: 25%;
+        padding-left: 25%;
+
+        &__left, &__right, &__whiteright{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            border: 2px solid black;
+            background: white;
+        }
+
+        &__left{
+            //background: pink;
+            width: 200%;
+            height: 110%;
+            border-radius: 0 10vw 10vw 0;
+        }
+
+        &__right{
+            //background: purple;
+            height: 200%;
+            width: 110%;
+            border-radius: 0 0 10vw 10vw;
+
+        }
+
+        &__whiteright{
+            border: 1px solid white;
+            //background: red;
+            width: calc(200% - 3.45px);
+            height: calc(110% - 3.45px);
+            border-radius: 0 10vw 10vw 0;
+            margin-top: 1.75px;
+            margin-left: 2px;
+        }    
+    }
+
+    &:hover{
+        .heart__left, .heart__right{
+            background: linear-gradient(135deg, #FF79DA , #9356DC);
+            border: none;
+        }
+
+        .heart__whiteright{
+            display: none;
+        }
+    }
+
+    input[type=checkbox] {
+        //visibility: hidden;
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        &:checked + .heart {
+            &__left, &__right{
+                background: linear-gradient(135deg, #FF79DA, #9356DC);
+                //background: red;
+                border: none;
+            }  
+        }
+    }
+
+
+}*/
 .heart__wrap {
   width: 50px;
   height: 50px;

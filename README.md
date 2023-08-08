@@ -6,7 +6,7 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
 ## Notice
     
 ### HTML  
-**Input de recherche position** : fichier **index.html ligne n°31**. Disabled activé sur l'input, veillez à le réactiver pour rendre l'input utilisable.
+**Input de recherche position** : fichier **index.html div class : home-form**. Disabled activé sur l'input, veillez à le réactiver pour rendre l'input utilisable.
 
 ## Nota Bene    
 ### comentaires SASS  
@@ -15,6 +15,8 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
 NB: Gérer l'apparence des puce liste ol dans index.html.
 
 NB: remplacer fa-heart par svg fa pour animation
++ créer checkbox
+
 
 
 

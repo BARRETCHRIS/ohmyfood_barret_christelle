@@ -112,10 +112,12 @@ nav{
     margin: 2.5rem auto;
     opacity: 1;
     @include shadow;
-    transition: 400ms;
+    transform: scale(1);
+    transition: all 400ms;
+
 
     &:hover{
-        scale: 1.005;
+        transform: scale(1.01);
         opacity: 0.85;
         box-shadow: 0 6px 4px rgba(0, 0, 0, .2);    
     }
@@ -230,6 +232,7 @@ nav{
             grid-row: 1/2;
             border: 2px solid black;
             background: white;
+            //transition: all 800ms;
         }
 
         &__left{
@@ -257,9 +260,11 @@ nav{
             margin-left: 2px;
         }    
     }
+    
 
-    &:hover{
+    &:hover, &:active{
         .heart__left, .heart__right{
+            
             background: linear-gradient(135deg, #FF79DA, #9356DC);
             border: none;
         }
@@ -467,15 +472,15 @@ nav{
             }
 
             legend{
-                margin: 0.5rem 0;
+                margin: 1.5rem 0 0.5rem 0;
+            }
 
-                hr{
-                    width: 40px;
-                    height: 3px;
-                    border: none;
-                    background: $adjust-color;
-                    margin: 0.25rem 0 0 0; 
-                }
+            hr{
+                width: 40px;
+                height: 3px;
+                border: none;
+                background: $adjust-color;
+                margin: 0.25rem 0 0 0; 
             }
 
             .form__card{
@@ -516,10 +521,13 @@ nav{
                     //overflow: hidden;
                     //text-overflow: ellipsis;
                     &__content{
+                        font-weight: 300;
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
                         justify-content: space-between;
+                        
+                        .price{font-weight: 500;}
                     }
                 }
 
@@ -558,7 +566,6 @@ footer{
             flex-wrap: nowrap;
             justify-content: space-around;
             align-items: center;
-
             dt{width: 20%; text-align: center;}
             dt, dd{ 
                 margin: 0.5rem;
@@ -591,7 +598,7 @@ footer{
             dt{
                 order: 5;
                 width: 20%; 
-                text-align: none;
+                //text-align: none;
             }
         }    
     }    

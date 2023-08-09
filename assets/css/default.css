@@ -236,6 +236,63 @@ nav .return-home .fa-arrow-left {
     }
 
 }*/
+.loader {
+  width: 100%;
+  height: 400px;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+}
+.loader .wait {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.loader .wait__plate {
+  width: 90%;
+  aspect-ratio: 1/1;
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle, rgb(153, 226, 208) 50%, rgb(208, 247, 237) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.loader .wait__plate__logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "Shrikhand", cursive;
+  font-size: 6vw;
+  margin-top: 2%;
+}
+.loader .wait__plate .logo_bottom {
+  transform: rotate(180deg);
+}
+.loader .wait__plate__shadowIn {
+  width: 70%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.25);
+  margin: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 60px 60px rgba(0, 0, 0, 0.2);
+  background: white;
+  filter: blur(1.5px);
+}
+
+/* --Home page-- */
 .home h2, .home h3 {
   font-weight: 700;
 }

@@ -119,19 +119,21 @@ nav{
     &:hover{
         transform: scale(1.01);
         opacity: 0.85;
-        box-shadow: 0 6px 4px rgba(0, 0, 0, .2);    
+        box-shadow: 0 6px 4px rgba(0, 0, 0, .3);    
     }
 }
 
 //heart test checkbox
-/*.favorit{
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    background: lightblue;
+.favorit{
+    width: 50px;
+    height: 50px;
+    ///margin: auto;
+    //background: lightblue;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    //position: relative;
+    //z-index: 4;
     .heart{
         //background: yellow;
         width: 80%;
@@ -150,6 +152,7 @@ nav{
             grid-row: 1/2;
             border: 2px solid black;
             background: white;
+            //background: linear-gradient(135deg, #FF79DA 0 , #9356DC 100%);
         }
 
         &__left{
@@ -170,44 +173,44 @@ nav{
         &__whiteright{
             border: 1px solid white;
             //background: red;
-            width: calc(200% - 3.45px);
-            height: calc(110% - 3.45px);
+            width: calc(200% - 3.75px);
+            height: calc(110% - 3px);
             border-radius: 0 10vw 10vw 0;
-            margin-top: 1.75px;
+            margin-top: 1.5px;
             margin-left: 2px;
-        }    
-    }
-
-    &:hover{
-        .heart__left, .heart__right{
-            background: linear-gradient(135deg, #FF79DA , #9356DC);
-            border: none;
         }
         
-        .heart__whiteright{
-            display: none;
-        }
-    }
-
-    input[type=checkbox] {
-        //visibility: hidden;
-        width: 1rem;
-        height: 1rem;
-        position: relative;
-        &:checked + .heart {
-            &__left, &__right{
-                background: linear-gradient(135deg, #FF79DA, #9356DC);
-                //background: red;
+        &:hover{
+            .heart__left, .heart__right{
+                background: linear-gradient(135deg, #FF79DA , #9356DC);
                 border: none;
-            }  
+            }
+            
+            .heart__whiteright{
+                display: none;
+            }
         }
-    }
-    
-    
-}*/
+        
+        input[type=checkbox] {
+            visibility: hidden;
+            width: 1rem;
+            height: 1rem;
+            position: relative;
+            &:checked ~ .heart__transit{
+                background: linear-gradient(135deg, #FF79DA, #9356DC);
+                border: none;
+            }
+
+            &:checked ~ .heart__whiteright{
+                display: none;
+            }
+        }    
+    }    
+}
 
 //heart test4
-.heart__wrap{
+
+/*.heart__wrap{
     width: 50px;
     height: 50px;
     //margin: auto;
@@ -261,7 +264,6 @@ nav{
         }    
     }
     
-
     &:hover, &:active{
         .heart__left, .heart__right{
             
@@ -274,7 +276,7 @@ nav{
         }
     }
     
-}
+}*/
 
 .home h2, .home h3{ 
     font-weight: 700;
@@ -385,17 +387,17 @@ nav{
         }
 
         .home__article__content{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: space-between;
             padding: 1rem;
-        }
-        .home__article__txt{
-            //padding: 1rem ;
             h3{font-size: 1.12rem; font-weight: 700;}
             p{font-weight: 300;}
+
+        }
+
+        .favorit{
+            position: absolute;
+            bottom: 4%;
+            right: 1.5%;
+            z-index: 10;
         }
     }
 
@@ -445,15 +447,19 @@ nav{
         margin: -40px auto 0 auto;
     
         &__title{
-            width: 100%;
+            //width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             h1{ 
+                max-width: 80%;
                 @include theme-font;
                 font-size: 28px;
                 margin: 1rem 0;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
 
             @media (min-width: 767px){
@@ -473,6 +479,7 @@ nav{
 
             legend{
                 margin: 1.5rem 0 0.5rem 0;
+                
             }
 
             hr{
@@ -492,58 +499,71 @@ nav{
                 border-radius: 15px;
                 //position: relative;//à neutraliser avec le !NB1! ci-dessous
                 overflow: hidden;
+                
 
 //!NB1! essai mise en place pour animation checkbox
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;//fin !NB1!
-                justify-content: space-between;
-                align-items: center;
+                //display: flex;
+                //flex-direction: row;
+                //flex-wrap: nowrap;//fin !NB1!
+                //justify-content: space-between;
+                //align-items: center;
 
 
                 @include shadow;
 
-                label{
+                .over_wrapper{
+                    position: relative;
                     width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    margin: 1rem;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-
-                    
-                }
-
-                .h2{
-                    margin: 0 0 0.5rem 0;
-                    //overflow: hidden;
-                    //text-overflow: ellipsis;
-                    &__content{
-                        font-weight: 300;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        justify-content: space-between;
-                        
-                        .price{font-weight: 500;}
-                    }
-                }
-
-               
-
-                input[type=checkbox]{
-                    //display: none;//à neutraliser avec le !NB1! ci-dessus
-                    //position: absolute;//à neutraliser avec le !NB1! ci-dessus
-                    //position: relative;
-                    //top: 0;
-                    //right: 100px;
-                    //box-shadow: none;
-                    //width: 110px;
                     height: 100%;
-                    aspect-ratio: 1 / 1;
-                    border: 2px solid red;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    label{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin: 1rem;
+                        overflow: hidden;
+                        //text-overflow: ellipsis;
+    
+                        
+                    }
+    
+                    .h2{
+                        margin: 0 0 0.5rem 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        &__content{
+                            font-weight: 300;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            justify-content: space-between;
+                            
+                            .price{font-weight: 500;}
+                        }
+                    }
+    
+                   
+    
+                    input[type=checkbox]{
+                        //display: none;//à neutraliser avec le !NB1! ci-dessus
+                        //position: absolute;//à neutraliser avec le !NB1! ci-dessus
+                        //position: relative;
+                        //top: 0;
+                        //right: 100px;
+                        //box-shadow: none;
+                        //width: 110px;
+                        height: 100%;
+                        aspect-ratio: 1 / 1;
+                        border: 2px solid red;
+                        //position: absolute;
+                        //right: -20%;
+                    }
                 }   
             }
         }

@@ -151,8 +151,10 @@ nav{
             grid-column: 1/2;
             grid-row: 1/2;
             border: 2px solid black;
-            background: white;
-            //background: linear-gradient(135deg, #FF79DA 0 , #9356DC 100%);
+            //background: white;
+            background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 0%, rgba(255,255,255,1) 0%);
+            
+            transition: background 400ms;
         }
 
         &__left{
@@ -182,7 +184,7 @@ nav{
         
         &:hover{
             .heart__left, .heart__right{
-                background: linear-gradient(135deg, #FF79DA , #9356DC);
+                background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%, rgba(255,255,255,1) 100%);
                 border: none;
             }
             
@@ -197,7 +199,7 @@ nav{
             height: 1rem;
             position: relative;
             &:checked ~ .heart__transit{
-                background: linear-gradient(135deg, #FF79DA, #9356DC);
+                background: linear-gradient(135deg, #9356DC, #FF79DA) ;
                 border: none;
             }
 
@@ -278,35 +280,83 @@ nav{
 }*/
 
 //Loader wait
+
+@keyframes fade-out {
+    75% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes text-rotate {
+    0%{
+        rotate: 0deg;
+        opacity: 0;
+    }
+
+    25%{
+        rotate: 360deg;
+        opacity: 0.5;
+    }
+
+    100%{
+        rotate: 360deg;
+        opacity: 1;
+    }
+}
+
+@keyframes plate-grow{
+    0%{
+        scale: 0.5;
+        border-radius: 5%;
+        rotate: 0;
+    }
+
+    100%{
+        scale: 1;
+        border-radius: 50%;
+        rotate: 360deg;
+    }
+}
+
 .loader{
+    //visibility: hidden;
+
     width: 100%;
-    height: 40vw;
+    height: 100%;
     padding: 5vw;
-    //background: lightblue;
-    background: $bg-home-form;
+    background: lightblue;
+    background: rgba(234,234,234,0.9);
     font-size: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    position: relative;
-    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: fade-out 4000ms forwards; 
+    pointer-events: none;
+    z-index: 1000;
 
     &__wrapper{
-        height: 100%;
-        min-height: 200px;
-        max-height: 500px;
-        //aspect-ratio: 1 / 1;
-        background: #9356DC;
+        min-height: 150px;
+        max-height: 400px;
+        aspect-ratio: 1 / 1;
+        //background: #9356DC;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        align-items: center;
-        padding: 2vw;
+        align-items: baseline;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 0;
 
         &__plate{
-            height: 70%;
+            width: 70%;
             aspect-ratio: 1 / 1;
-            margin: 0 2vw;
             border-radius: 50%;
             background: radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(153,226,208,1) 120%);
             display: flex;
@@ -316,6 +366,7 @@ nav{
             filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
             border: 2px solid rgba(180, 214, 205, 0.5);
             border-bottom: none;
+            animation: plate-grow 1000ms ease-in 0ms 1;
 
             &__text{
                 position: absolute;
@@ -324,7 +375,44 @@ nav{
                 right: 0;
                 left: 0;
                 z-index: 5;
-                background-color: rgba(0, 0, 0, .2);
+                //background-color: rgba(0, 0, 0, .2);
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                
+                &__logo, &__wait{
+                    position: absolute;
+                    opacity: 1;
+                    @include theme-font;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    color: #9356DC;
+                    animation: text-rotate 2000ms  infinite;
+                    //animation-delay: 1000ms;
+
+                    @media (min-width: 500px){
+                        font-size: 3.8vw;
+                    }
+                    @media (min-width: 780px){
+                        font-size: 1.9rem;
+                    }
+                }
+
+                &__logo{
+                    //@include theme-font;
+                    display: none;
+                }
+/*
+                &__logo{
+                    @include theme-font;
+                    //display: none;
+                }
+
+                &__wait{
+                    @include main-font;
+                    font-weight: 700;
+                    display: none;
+                }    */
             }
             
 
@@ -335,31 +423,16 @@ nav{
                 border-bottom: 5px solid rgba(0, 0, 0, .25);
                 border-top: 1px solid rgba(0, 0, 0, .50);
                 background: white;
-                filter: blur(1.5px);
-                
-                
+                filter: blur(1.5px);    
             }
-
-
-
-        /*    &__text{
-                width: 60%;
-                aspect-ratio: 1 / 1;
-                border-radius: 50%;
-                border-bottom: 5px solid rgba(0, 0, 0, .25);
-                border-top: 1px solid rgba(0, 0, 0, .50);
-                background: white;
-                filter: blur(1.5px);
-            }*/
             
         }
         
         &__fork, &__knife{
-           
             .cutlery{
-
-                height: 10vw;
-                min-height: 80px;
+                height: 30vw;
+                min-height: 100px;
+                max-height: 200px;
             }
         }
 
@@ -532,12 +605,17 @@ nav{
 
 .home__resto{
     background: $bg-content;
+    position: relative;
+    padding: 1.5rem 0;
+
+    
 
     &__wrapper{
         max-width: 1080px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
+        padding: 0 1rem;
     }
 
     article{
@@ -548,6 +626,12 @@ nav{
         background: white;
         margin: 1rem 0;
         @include shadow;
+
+        a:hover{
+            img{
+                transform: scale(1.02);
+            }
+        }
 
         .flag__new{
             width: 5rem;
@@ -565,6 +649,8 @@ nav{
         img{
             height: 14.45rem;
             object-fit: cover;
+            transform: scale(1);
+            transition: all 400ms;
         }
 
         .home__article__content{

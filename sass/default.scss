@@ -280,66 +280,180 @@ nav{
 //Loader wait
 .loader{
     width: 100%;
-    height: 400px;
-    background: lightblue;
+    height: 40vw;
+    padding: 5vw;
+    //background: lightblue;
+    background: $bg-home-form;
+    font-size: 100%;
     display: flex;
     align-items: center;
-    .wait{
+    justify-content: space-around;
+    position: relative;
+    
+
+    &__wrapper{
+        height: 100%;
+        min-height: 200px;
+        max-height: 500px;
+        //aspect-ratio: 1 / 1;
+        background: #9356DC;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 2vw;
+
+        &__plate{
+            height: 70%;
+            aspect-ratio: 1 / 1;
+            margin: 0 2vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(153,226,208,1) 120%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+            filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+            border: 2px solid rgba(180, 214, 205, 0.5);
+            border-bottom: none;
+
+            &__text{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                z-index: 5;
+                background-color: rgba(0, 0, 0, .2);
+            }
+            
+
+            &__shadowIn{
+                height: 70%;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                border-bottom: 5px solid rgba(0, 0, 0, .25);
+                border-top: 1px solid rgba(0, 0, 0, .50);
+                background: white;
+                filter: blur(1.5px);
+                
+                
+            }
+
+
+
+        /*    &__text{
+                width: 60%;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                border-bottom: 5px solid rgba(0, 0, 0, .25);
+                border-top: 1px solid rgba(0, 0, 0, .50);
+                background: white;
+                filter: blur(1.5px);
+            }*/
+            
+        }
+        
+        &__fork, &__knife{
+           
+            .cutlery{
+
+                height: 10vw;
+                min-height: 80px;
+            }
+        }
+
+        
+    }
+
+
+
+   /* first test
+   .wait{
         margin: auto;
-        width: 300px;
-        height: 300px;
-        background: lightcoral;
+        width: 600px;
+        height: 400px;
+        //background: lightcoral;
+        background: $bg-home-form;
         display: flex;
         align-items: center;
         justify-content: space-around;
+       
 
         &__plate{
-            width: 90%;
+            width: 80%;
             aspect-ratio: 1 / 1;
             background: white;
             border-radius: 50%;
-            text-align: center;
-            padding: 7%;
+            padding: 3%;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(circle, rgba(153,226,208,1) 50%, rgba(208,247,237,1) 100%);
+            background: radial-gradient(circle, rgba(208,247,237,1) 10%, rgba(153,226,208,1) 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-
-
+            filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+            border: 2px solid rgba(180, 214, 205, 0.5);
+            border-bottom: none;
+            //border-top: 3px solid lighten(rgba(118, 153, 144, 0.5), 10%);
+            //transform: rotate(90deg);
+            box-shadow: inset 0 -60px 60px rgba(0, 0, 0, .20);
+            //transform: rotate(180deg);
+            
             &__logo{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 @include theme-font;
-                font-size: 6vw;
-                margin-top: 2%;         
+                font-size: 5vw;
+                animation: spin 1s ease-in 3s;             
+            }
+
+            @keyframes spin{
+                0%{transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+                100%{transform: rotate(380deg); -webkit-transform: rotate(380deg);}
+            }
+
+            @-webkit-keyframes spin{
+                0%{transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+                100%{transform: rotate(380deg); -webkit-transform: rotate(380deg);}
             }
 
             .logo_bottom{
                 transform: rotate(180deg);
-                //bottom: 8%;
             }
 
             &__shadowIn{
-                width: 70%;
+                width: 65%;
                 aspect-ratio: 1 / 1;
                 border-radius: 50%;
                 border-bottom: 5px solid rgba(0, 0, 0, .25);
-                margin: auto;
-                //align-self: center;
                 border-top: 1px solid rgba(0, 0, 0, .50);
-                box-shadow: 0 60px 60px rgba(0, 0, 0, .20);
                 background: white;
                 filter: blur(1.5px);
+                //transform: rotate(180deg);
             }
+
+            @media (min-width: 430px){
+                max-width: 300px;
+                &__logo{
+                    font-size: 3.6vw;
+                }
+
+            }
+            @media (min-width: 768px){
+                max-width: 300px;
+                &__logo{
+                    font-size: 1.6rem;
+                }
+
+            } 
         }
 
-    }
+    }*/
 }
 
 

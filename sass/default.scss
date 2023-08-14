@@ -132,7 +132,7 @@ nav{
 .btn{
     max-width: 218px;
     height: 50px;
-    padding: 0 5vw;
+    padding: 0 10px;
     background: $gradient;
     //background: red;
     color: white;
@@ -147,11 +147,15 @@ nav{
     transform: scale(1);
     transition: all 400ms;
 
-
     &:hover{
         transform: scale(1.01);
         opacity: 0.85;
         box-shadow: 0 6px 4px rgba(0, 0, 0, .3);    
+    }
+    
+    @media (min-width: 780px){
+        width: 218px;
+        padding: 0 auto;
     }
 }
 

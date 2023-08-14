@@ -113,7 +113,7 @@ nav .return-home .fa-arrow-left {
 .btn {
   max-width: 218px;
   height: 50px;
-  padding: 0 5vw;
+  padding: 0 10px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-size: 1.1rem;
@@ -131,6 +131,12 @@ nav .return-home .fa-arrow-left {
   transform: scale(1.01);
   opacity: 0.85;
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 780px) {
+  .btn {
+    width: 218px;
+    padding: 0 auto;
+  }
 }
 
 .favorit {

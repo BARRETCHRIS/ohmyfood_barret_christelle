@@ -18,6 +18,7 @@ $home-adjust-color: #9356DC;
 //NB filter désactiver pour test à vérifier
 //@mixin shadow{filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.15));}
 @mixin shadow{box-shadow: 0 4px 6px rgba(0, 0, 0, .2);}
+@mixin ellipsis{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 
 
 // ##RESET & GENERAL
@@ -39,10 +40,11 @@ section, footer{
     padding: 1.5rem 1rem;
 }
 
-h2, .h2{
+h2{
     font-size: 24px;
-    margin: 0 0 1rem 0;
 }
+
+
 // --HEADER--
 /* --HEADER-- */
 nav{
@@ -128,8 +130,9 @@ nav{
 
 //Call to action
 .btn{
-    width: 218px;
+    max-width: 218px;
     height: 50px;
+    padding: 0 5vw;
     background: $gradient;
     //background: red;
     color: white;
@@ -182,7 +185,7 @@ nav{
             border: 2px solid black;
             //background: white;
             background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-            box-shadow: inset 0 100px 2px rgba(255, 255, 255, 1);
+            box-shadow: inset 0 100px 0 rgba(255, 255, 255, 1);
             transition: box-shadow 400ms;
         }
 
@@ -202,7 +205,7 @@ nav{
 
         &__whiteright{
             border: 1px solid white;
-            //background: red;
+            background: white;
             width: calc(200% - 3.75px);
             height: calc(110% - 3px);
             border-radius: 0 10vw 10vw 0;
@@ -474,6 +477,8 @@ nav{
 }
 
 .home__steps{
+    h2{@include ellipsis;}
+
     ol{padding-right: 1rem;}
 
     li {
@@ -485,6 +490,8 @@ nav{
     align-items: center;
     padding: 0 0.5rem;
     margin: 1.5rem 0 1.5rem 0.5rem;
+    
+    
 
     @media (min-width: 768px) {
         margin: 0;
@@ -494,8 +501,9 @@ nav{
 
     span{
         width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        display: block;
+        border-radius: 0.75rem;
         color: white;
         background: $home-adjust-color;
         text-align: center;
@@ -503,7 +511,7 @@ nav{
         margin: 0 1rem 0 -1.25rem;
     }
 
-    i{margin-right: 1.5rem;}
+    i{margin-right: 5vw;}
     .fa-store{color: $home-adjust-color;}
     
     }
@@ -645,9 +653,7 @@ nav{
                 @include theme-font;
                 font-size: 28px;
                 margin: 1rem 0;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @include ellipsis;
             }
 
             @media (min-width: 767px){
@@ -665,10 +671,7 @@ nav{
                 margin: 0.5rem 0;
             }
 
-            legend{
-                margin: 1.5rem 0 0.5rem 0;
-                
-            }
+            legend{margin: 1.5rem 0 0.5rem 0;}
 
             hr{
                 width: 40px;
@@ -680,77 +683,97 @@ nav{
 
             .form__card{
                 width: 100%;
-                height: 5.5rem;
+                height: 4.5rem;
                 background: white;
                 margin: 1rem 0;
-                //padding: 1rem;
                 border-radius: 15px;
-                //position: relative;//à neutraliser avec le !NB1! ci-dessous
-                overflow: hidden;
-                
-
-//!NB1! essai mise en place pour animation checkbox
-                //display: flex;
-                //flex-direction: row;
-                //flex-wrap: nowrap;//fin !NB1!
-                //justify-content: space-between;
-                //align-items: center;
-
-
                 @include shadow;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                position: relative;
 
-                .over_wrapper{
+
+                &__content{
                     position: relative;
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    flex-direction: row;
-                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin-right: 0;
+                    transition: margin-right 1000ms;
 
-                    label{
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                        margin: 1rem;
-                        overflow: hidden;
-                        //text-overflow: ellipsis;
-    
-                        
+                    h2{
+                        //width: 10%;
+                        @include ellipsis;
+                        margin: 0 1rem
                     }
-    
-                    .h2{
-                        margin: 0 0 0.5rem 0;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        &__content{
+
+                    &__info{
+                        width: 95%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0 1rem;
+
+                        :first-child{
                             font-weight: 300;
-                            display: flex;
-                            flex-direction: row;
-                            flex-wrap: nowrap;
-                            justify-content: space-between;
-                            
-                            .price{font-weight: 500;}
+                            overflow: hidden;
+                            @include ellipsis;
                         }
                     }
-    
-                   
-    
-                    input[type=checkbox]{
-                        //display: none;//à neutraliser avec le !NB1! ci-dessus
-                        //position: absolute;//à neutraliser avec le !NB1! ci-dessus
-                        //position: relative;
-                        //top: 0;
-                        //right: 100px;
-                        //box-shadow: none;
-                        //width: 110px;
+
+                    &__label{
+                        width: 160%;
                         height: 100%;
-                        aspect-ratio: 1 / 1;
-                        border: 2px solid red;
-                        //position: absolute;
-                        //right: -20%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        cursor: pointer;
+                        transition: width 1000ms;
+                        &__checkwrap{
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            background: $adjust-color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            position: absolute;
+                            right: 0;
+                            transition: right 1000ms;
+                            /*
+                            margin-right: -100%;
+                            transition: margin-right 1000ms;*/
+
+                            &__bgInt{
+                                width: 60%;
+                                aspect-ratio: 1 / 1;
+                                border-radius: 50%;
+                                background: white;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                .fa-check{
+                                    color: $adjust-color;
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }  
+                    }
+
+                    &__label:hover {
+                        width: 100%;
+                    }
+
+                    &__checkbox{
+                        //visibility: hidden;
+                        //margin-right: -100%;
+                        display: none;   
+                    }
+
+                    &__checkbox:checked ~ label {
+                        width: 100%;
+                        
                     }
                 }   
             }

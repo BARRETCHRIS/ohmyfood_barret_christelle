@@ -31,9 +31,8 @@ section, footer {
   padding: 1.5rem 1rem;
 }
 
-h2, .h2 {
+h2 {
   font-size: 24px;
-  margin: 0 0 1rem 0;
 }
 
 /* --HEADER-- */
@@ -112,8 +111,9 @@ nav .return-home .fa-arrow-left {
 
 /* --SPECIALS ELEMENTS-- */
 .btn {
-  width: 218px;
+  max-width: 218px;
   height: 50px;
+  padding: 0 5vw;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-size: 1.1rem;
@@ -157,7 +157,7 @@ nav .return-home .fa-arrow-left {
   grid-row: 1/2;
   border: 2px solid black;
   background: linear-gradient(135deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: inset 0 100px 2px rgb(255, 255, 255);
+  box-shadow: inset 0 100px 0 rgb(255, 255, 255);
   transition: box-shadow 400ms;
 }
 .favorit .heart__left {
@@ -172,6 +172,7 @@ nav .return-home .fa-arrow-left {
 }
 .favorit .heart__whiteright {
   border: 1px solid white;
+  background: white;
   width: calc(200% - 3.75px);
   height: calc(110% - 3px);
   border-radius: 0 10vw 10vw 0;
@@ -399,6 +400,11 @@ nav .return-home .fa-arrow-left {
   margin: 1rem 0;
 }
 
+.home__steps h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .home__steps ol {
   padding-right: 1rem;
 }
@@ -420,8 +426,9 @@ nav .return-home .fa-arrow-left {
 }
 .home__steps li span {
   width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: block;
+  border-radius: 0.75rem;
   color: white;
   background: #9356DC;
   text-align: center;
@@ -429,7 +436,7 @@ nav .return-home .fa-arrow-left {
   margin: 0 1rem 0 -1.25rem;
 }
 .home__steps li i {
-  margin-right: 1.5rem;
+  margin-right: 5vw;
 }
 .home__steps li .fa-store {
   color: #9356DC;
@@ -585,50 +592,89 @@ nav .return-home .fa-arrow-left {
 }
 .resto__menu form .form__card {
   width: 100%;
-  height: 5.5rem;
+  height: 4.5rem;
   background: white;
   margin: 1rem 0;
   border-radius: 15px;
-  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
 }
-.resto__menu form .form__card .over_wrapper {
+.resto__menu form .form__card__content {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.resto__menu form .form__card .over_wrapper label {
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 1rem;
-  overflow: hidden;
+  justify-content: space-evenly;
+  margin-right: 0;
+  transition: margin-right 1000ms;
 }
-.resto__menu form .form__card .over_wrapper .h2 {
-  margin: 0 0 0.5rem 0;
+.resto__menu form .form__card__content h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 1rem;
+}
+.resto__menu form .form__card__content__info {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.resto__menu form .form__card__content__info :first-child {
+  font-weight: 300;
+  overflow: hidden;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.resto__menu form .form__card .over_wrapper .h2__content {
-  font-weight: 300;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+.resto__menu form .form__card__content__label {
+  width: 160%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: width 1000ms;
 }
-.resto__menu form .form__card .over_wrapper .h2__content .price {
-  font-weight: 500;
-}
-.resto__menu form .form__card .over_wrapper input[type=checkbox] {
+.resto__menu form .form__card__content__label__checkwrap {
   height: 100%;
   aspect-ratio: 1/1;
-  border: 2px solid red;
+  background: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  transition: right 1000ms;
+  /*
+  margin-right: -100%;
+  transition: margin-right 1000ms;*/
+}
+.resto__menu form .form__card__content__label__checkwrap__bgInt {
+  width: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.resto__menu form .form__card__content__label__checkwrap__bgInt .fa-check {
+  color: #99E2D0;
+  font-size: 1.5rem;
+}
+.resto__menu form .form__card__content__label:hover {
+  width: 100%;
+}
+.resto__menu form .form__card__content__checkbox {
+  display: none;
+}
+.resto__menu form .form__card__content__checkbox:checked ~ label {
+  width: 100%;
 }
 
 /* Footer */

@@ -135,7 +135,7 @@ nav .return-home .fa-arrow-left {
 @media (min-width: 300px) {
   .btn {
     width: 218px;
-    padding: 0 auto;
+    padding: 0 2vw;
   }
 }
 
@@ -584,6 +584,8 @@ nav .return-home .fa-arrow-left {
   margin: 0 auto;
 }
 .resto__menu form fieldset {
+  display: block;
+  width: 100%;
   margin: 0.5rem 0;
 }
 .resto__menu form legend {
@@ -596,16 +598,6 @@ nav .return-home .fa-arrow-left {
   background: #99E2D0;
   margin: 0.25rem 0 0 0;
 }
-@keyframes fade-in {
-  0% {
-    scale: 1.5;
-    opacity: 0;
-  }
-  100% {
-    scale: 1;
-    opacity: 1;
-  }
-}
 .resto__menu form .form__card {
   width: 100%;
   height: 4.5rem;
@@ -617,9 +609,13 @@ nav .return-home .fa-arrow-left {
   flex-wrap: nowrap;
   overflow: hidden;
   position: relative;
+  transform: scale(1);
+}
+.resto__menu form .form__card-1, .resto__menu form .form__card-2, .resto__menu form .form__card-3, .resto__menu form .form__card-4, .resto__menu form .form__card-5, .resto__menu form .form__card-6, .resto__menu form .form__card-7, .resto__menu form .form__card-8, .resto__menu form .form__card-9, .resto__menu form .form__card-10, .resto__menu form .form__card-11, .resto__menu form .form__card-12 {
+  transform: scale(1);
 }
 .resto__menu form .form__card.form__card-1 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -627,7 +623,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 400ms;
 }
 .resto__menu form .form__card.form__card-2 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -635,7 +631,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 800ms;
 }
 .resto__menu form .form__card.form__card-3 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -643,7 +639,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 1200ms;
 }
 .resto__menu form .form__card.form__card-4 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -651,7 +647,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 1600ms;
 }
 .resto__menu form .form__card.form__card-5 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -659,7 +655,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 2000ms;
 }
 .resto__menu form .form__card.form__card-6 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -667,7 +663,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 2400ms;
 }
 .resto__menu form .form__card.form__card-7 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -675,7 +671,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 2800ms;
 }
 .resto__menu form .form__card.form__card-8 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -683,7 +679,7 @@ nav .return-home .fa-arrow-left {
   animation-delay: 3200ms;
 }
 .resto__menu form .form__card.form__card-9 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
@@ -691,12 +687,28 @@ nav .return-home .fa-arrow-left {
   animation-delay: 3600ms;
 }
 .resto__menu form .form__card.form__card-10 {
-  scale: 1.5;
+  transform: scale(1.5);
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fade-in;
   animation-duration: 1000ms;
   animation-delay: 4000ms;
+}
+.resto__menu form .form__card.form__card-11 {
+  transform: scale(1.5);
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fade-in;
+  animation-duration: 1000ms;
+  animation-delay: 4400ms;
+}
+.resto__menu form .form__card.form__card-12 {
+  transform: scale(1.5);
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fade-in;
+  animation-duration: 1000ms;
+  animation-delay: 4800ms;
 }
 .resto__menu form .form__card__content {
   position: relative;
@@ -771,6 +783,16 @@ nav .return-home .fa-arrow-left {
 }
 .resto__menu form .form__card__content__checkbox:checked ~ label {
   width: 100%;
+}
+@keyframes fade-in {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Footer */

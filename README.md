@@ -14,7 +14,7 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
   
 NB: Gérer l'apparence des puce liste ol dans index.html.
 
-NB: Faire l'anim du bg heart 
+ 
 
 
 

@@ -777,11 +777,13 @@ nav .return-home .fa-arrow-left {
   top: 2px;
   right: 2px;
 }
-.resto__menu form .form__card__content__checkbox:hover ~ .form__card__content__label {
-  width: 100%;
-}
-.resto__menu form .form__card__content__checkbox:hover ~ .form__card__content {
-  width: calc(100% - 4rem);
+@media (min-width: 1024px) {
+  .resto__menu form .form__card__content__checkbox:hover ~ .form__card__content__label {
+    width: 100%;
+  }
+  .resto__menu form .form__card__content__checkbox:hover ~ .form__card__content {
+    width: calc(100% - 4rem);
+  }
 }
 .resto__menu form .form__card__content__checkbox:checked ~ .form__card__content__label {
   width: 100%;

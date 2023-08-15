@@ -735,7 +735,7 @@ nav{
                     }
 
                     &__info{
-                        //width: 100%;
+                        width: 100%;
                         display: flex;
                         justify-content: space-between;
 
@@ -743,11 +743,14 @@ nav{
                             font-weight: 300;
                             @include ellipsis;
                         }
-                    }   
+                        :last-child{
+                            white-space: nowrap;
+                        }
+                    }    
                 }
-
+                
                 &__content__label{
-                    width: 150%;
+                    width: calc(100% + 4.5rem);
                     height: 100%;
                     position: absolute;
                     top: 0;
@@ -781,27 +784,30 @@ nav{
                         }
                     }  
                 }
-
+                
                 &__content__checkbox{
                     //visibility: hidden;
                     //margin-right: -100%;
-                    display: none;       
+                    display: none;
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;    
                 }
-
+                        
                 &__content__checkbox:hover ~ .form__card__content__label {
                     width: 100%;  
                 }
 
                 &__content__checkbox:hover ~ .form__card__content{
-                    width: 80%;    
-                }
-
-                &__content__checkbox:hover ~ &__content{
-                    width: 80%;
+                    width: calc(100% - 4rem);    
                 }
 
                 &__content__checkbox:checked ~ .form__card__content__label {
                     width: 100%;    
+                }
+
+                &__content__checkbox:checked ~ .form__card__content{
+                    width: calc(100% - 4rem);    
                 }
             }
 

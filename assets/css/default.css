@@ -725,6 +725,7 @@ nav .return-home .fa-arrow-left {
   text-overflow: ellipsis;
 }
 .resto__menu form .form__card__content__info {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -734,8 +735,11 @@ nav .return-home .fa-arrow-left {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.resto__menu form .form__card__content__info :last-child {
+  white-space: nowrap;
+}
 .resto__menu form .form__card__content__label {
-  width: 150%;
+  width: calc(100% + 4.5rem);
   height: 100%;
   position: absolute;
   top: 0;
@@ -769,18 +773,21 @@ nav .return-home .fa-arrow-left {
 }
 .resto__menu form .form__card__content__checkbox {
   display: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
 }
 .resto__menu form .form__card__content__checkbox:hover ~ .form__card__content__label {
   width: 100%;
 }
 .resto__menu form .form__card__content__checkbox:hover ~ .form__card__content {
-  width: 80%;
-}
-.resto__menu form .form__card__content__checkbox:hover ~ .resto__menu form .form__card__content {
-  width: 80%;
+  width: calc(100% - 4rem);
 }
 .resto__menu form .form__card__content__checkbox:checked ~ .form__card__content__label {
   width: 100%;
+}
+.resto__menu form .form__card__content__checkbox:checked ~ .form__card__content {
+  width: calc(100% - 4rem);
 }
 @keyframes fade-in {
   0% {

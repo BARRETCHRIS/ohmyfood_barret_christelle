@@ -173,7 +173,7 @@ nav{
     .heart{
         //background: yellow;
         width: 80%;
-        height: 80%;
+        aspect-ratio: 1/1;
         display: grid;
         top: 3%;
         grid-template-columns: repeat(2, 50%);
@@ -670,12 +670,15 @@ nav{
             width: 100%;
             max-width: 650px;
             margin: 0 auto;
+            position: relative;
 
             fieldset{
-                display: block;
+                //display: block;
+                //position: relative;
+                box-sizing: border-box;
                 width: 100%;
-                margin: 0.5rem 0;
-
+                min-width: 10px;
+                //background: rgba(red, .2);
             }
 
             legend{margin: 1.5rem 0 0.5rem 0;}
@@ -695,8 +698,8 @@ nav{
                 margin: 1rem 0;
                 border-radius: 15px;
                 @include shadow;
-                display: flex;
-                flex-wrap: nowrap;
+                //display: flex;
+                //flex-wrap: nowrap;
                 overflow: hidden;
                 position: relative;
                 transform: scale(1);
@@ -706,108 +709,110 @@ nav{
                 }
 
                 @for $i from 1 through 12 {
-                    &.form__card-#{$i} {
+                    &.form__card_#{$i} {
                         transform: scale(1.5);
                         opacity: 0;
                         animation-fill-mode: forwards;
                         animation-name: fade-in;
                         animation-duration: 1000ms;
-                        animation-delay: #{$i * 400}ms;
+                        animation-delay: #{$i * 300}ms;
                     }
                 }
 
                 &__content{
+                    //background: rgba(0, 0, 0, .2);
                     position: relative;
                     width: 100%;
                     height: 100%;
+                    padding: 0 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
-                    margin-right: 0;
-                    transition: margin-right 1000ms;
+                    transition: width 1000ms;
 
                     h2{
-                        //width: 10%;
-                        @include ellipsis;
-                        margin: 0 1rem
+                        @include ellipsis;    
                     }
 
                     &__info{
-                        width: 95%;
+                        //width: 100%;
                         display: flex;
                         justify-content: space-between;
-                        margin: 0 1rem;
 
                         :first-child{
                             font-weight: 300;
-                            overflow: hidden;
                             @include ellipsis;
                         }
-                    }
+                    }   
+                }
 
-                    &__label{
-                        width: 160%;
+                &__content__label{
+                    width: 150%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    transition: width 1000ms;
+
+                    &__checkwrap{
                         height: 100%;
+                        aspect-ratio: 1 / 1;
+                        background: $adjust-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        cursor: pointer;
-                        transition: width 1000ms;
-                        &__checkwrap{
-                            height: 100%;
+                        right: 0;
+                        transition: right 1000ms;
+
+                        &__bgInt{
+                            width: 60%;
                             aspect-ratio: 1 / 1;
-                            background: $adjust-color;
+                            border-radius: 50%;
+                            background: white;
                             display: flex;
                             align-items: center;
                             justify-content: space-around;
-                            position: absolute;
-                            right: 0;
-                            transition: right 1000ms;
-                            /*
-                            margin-right: -100%;
-                            transition: margin-right 1000ms;*/
-
-                            &__bgInt{
-                                width: 60%;
-                                aspect-ratio: 1 / 1;
-                                border-radius: 50%;
-                                background: white;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-around;
-                                .fa-check{
-                                    color: $adjust-color;
-                                    font-size: 1.5rem;
-                                }
+                            .fa-check{
+                                color: $adjust-color;
+                                font-size: 1.5rem;
                             }
-                        }  
-                    }
+                        }
+                    }  
+                }
 
-                    &__label:hover {
-                        width: 100%;
-                    }
+                &__content__checkbox{
+                    //visibility: hidden;
+                    //margin-right: -100%;
+                    display: none;       
+                }
 
-                    &__checkbox{
-                        //visibility: hidden;
-                        //margin-right: -100%;
-                        display: none;   
-                    }
+                &__content__checkbox:hover ~ .form__card__content__label {
+                    width: 100%;  
+                }
 
-                    &__checkbox:checked ~ label {
-                        width: 100%;
-                        
-                    }
-                }   
+                &__content__checkbox:hover ~ .form__card__content{
+                    width: 80%;    
+                }
+
+                &__content__checkbox:hover ~ &__content{
+                    width: 80%;
+                }
+
+                &__content__checkbox:checked ~ .form__card__content__label {
+                    width: 100%;    
+                }
             }
 
             @keyframes fade-in {
                 0% {
                     transform: scale(1.5);
-                    opacity: 0
+                    opacity: 0;
                 }
                 100% {
                     transform: scale(1);
-                    opacity: 1
+                    opacity: 1;
                 }
             }
         }

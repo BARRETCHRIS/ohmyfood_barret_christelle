@@ -146,13 +146,11 @@ nav{
     @include shadow;
     transform: scale(1);
     transition: all 400ms;
-
     &:hover{
         transform: scale(1.01);
         opacity: 0.85;
         box-shadow: 0 6px 4px rgba(0, 0, 0, .3);    
     }
-
     @media (min-width: 300px){
         width: 218px;
         padding: 0 2vw;
@@ -163,15 +161,10 @@ nav{
 .favorit{
     width: 50px;
     height: 50px;
-    //margin: auto;
-    //background: lightblue;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    //position: relative;
-    //z-index: 4;
     .heart{
-        //background: yellow;
         width: 80%;
         aspect-ratio: 1/1;
         display: grid;
@@ -182,31 +175,24 @@ nav{
         transform: rotate(-135deg);
         padding-top: 25%;
         padding-left: 25%;
-
         &__left, &__right, &__whiteright{
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             border: 2px solid black;
-            //background: white;
             background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
             box-shadow: inset 0 100px 0 rgba(255, 255, 255, 1);
             transition: box-shadow 400ms;
         }
-
         &__left{
-            //background: pink;
             width: 200%;
             height: 110%;
             border-radius: 0 9vw 9vw 0;
         }
-
         &__right{
-            //background: purple;
             height: 200%;
             width: 110%;
             border-radius: 0 0 10vw 10vw;
         }
-
         &__whiteright{
             border: 1px solid white;
             background: white;
@@ -216,7 +202,6 @@ nav{
             margin-top: 1.5px;
             margin-left: 2px;
         }
-
         @media (min-width: 1024px){
             &:hover{
                 .heart__left, .heart__right{
@@ -224,15 +209,11 @@ nav{
                     box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
                     border: none;       
                 }
-                
                 .heart__whiteright{
                     display: none;
                 }
             }
         }
-        
-        
-        
         input[type=checkbox] {
             visibility: hidden;
             width: 1rem;
@@ -243,9 +224,6 @@ nav{
                 box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
                 border: none;
             }
-
-            
-
             &:checked ~ .heart__whiteright{
                 display: none;
             }
@@ -456,384 +434,15 @@ nav{
 }
 }
 
-
-// --Home page--
-/* --Home page-- */
-.home h2, .home h3{ 
-    font-weight: 700;
-}
-
-.home__blurb{
-    background: $bg-content;
-    text-align: center;
-
-    h1{
-        font-size: 1.5rem; 
-        font-weight: 700;
-        margin: 1rem 0;
-
-        @media (min-width: 767px){
-            font-size: 2.5rem;
-        }
-    }
-
-    p{font-size: 1.12rem; font-weight: 300;margin: 1rem 0;}
-}
-
-.home__steps{
-    h2{@include ellipsis;}
-
-    ol{padding-right: 1rem;}
-
-    li {
-    width: 100%;
-    height: 72.5px;
-    border-radius: 20px;
-    background: $bg-content;
-    display: flex;
-    align-items: center;
-    padding: 0 0.5rem;
-    margin: 1.5rem 0 1.5rem 0.5rem;
-    
-    
-
-    @media (min-width: 768px) {
-        margin: 0;
-    }
-
-    @include shadow;
-
-    span{
-        width: 1.5rem;
-        aspect-ratio: 1 / 1;
-        display: block;
-        border-radius: 0.75rem;
-        color: white;
-        background: $home-adjust-color;
-        text-align: center;
-        line-height: 1.50rem;
-        margin: 0 1rem 0 -1.25rem;
-    }
-
-    i{margin-right: 5vw;}
-    .fa-store{color: $home-adjust-color;}
-    
-    }
-
-    @media (min-width: 767px){
-        max-width: 1080px;
-        margin: 0 auto;
-        
-        ol{
-            display: flex;
-            justify-content: space-between;
-            padding-right: 0;
-
-            li{width: 31%;}
-        
-        }
-    }
-} 
-
-.home__resto{
-    background: $bg-content;
-    position: relative;
-    padding: 1.5rem 0;
-
-    
-
-    &__wrapper{
-        max-width: 1080px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 1rem;
-    }
-
-    article{
-        width: 100%;
-        border-radius: 25px;
-        overflow: hidden;
-        position: relative;
-        background: white;
-        margin: 1rem 0;
-        @include shadow;
-
-        a:hover{
-            img{
-                transform: scale(1.02);
-            }
-        }
-
-        .flag__new{
-            width: 5rem;
-            height: 1.8rem;
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: $adjust-color;
-            color: $adjust-color-txt;
-            text-align: center;
-            line-height: 1.80rem;
-            border-radius: 2px;
-        }
-
-        img{
-            height: 14.45rem;
-            -o-object-fit: cover;
-               object-fit: cover;
-            transform: scale(1);
-            transition: all 400ms;
-        }
-
-        .home__article__content{
-            padding: 1rem;
-            h3{font-size: 1.12rem; font-weight: 700;}
-            p{font-weight: 300;}
-
-        }
-
-        .favorit{
-            position: absolute;
-            bottom: 4%;
-            right: 1.5%;
-            z-index: 10;
-        }
-    }
-
-    @media (min-width: 767px){
-        &__wrapper {
-            justify-content: space-between;
-            h2{width: 100%;}
-            article{
-                width: 48%;
-            }
-        }           
-    }    
-}
-
-// --Resto pages--
-/* --Resto pages-- */
-
-.resto{
-
-    &__img{
-        height: 400px;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .palette_gout{
-        background-image: url("../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    }
-    
-    .note-enchant{
-        background-image: url("../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-    }
-
-    .delice-sens{
-        background-image: url("../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    }
-
-    .a-la-francaise{
-        background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    }
-
-    &__menu{
-        background: $bg-content;
-        border-radius: 40px 40px 0 0;
-        max-width: 1080px;
-        margin: -40px auto 0 auto;
-    
-        &__title{
-            //width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            h1{ 
-                max-width: 80%;
-                @include theme-font;
-                font-size: 28px;
-                margin: 1rem 0;
-                @include ellipsis;
-            }
-
-            @media (min-width: 767px){
-                margin: 1rem auto;
-                max-width: 350px;
-            }
-        }
-
-        form{
-            width: 100%;
-            max-width: 650px;
-            margin: 0 auto;
-            position: relative;
-
-            fieldset{
-                //display: block;
-                //position: relative;
-                box-sizing: border-box;
-                width: 100%;
-                min-width: 10px;
-                //background: rgba(red, .2);
-            }
-
-            legend{margin: 1.5rem 0 0.5rem 0;}
-
-            hr{
-                width: 40px;
-                height: 3px;
-                border: none;
-                background: $adjust-color;
-                margin: 0.25rem 0 0 0; 
-            }
-
-            .form__card{
-                width: 100%;
-                height: 4.5rem;
-                background: white;
-                margin: 1rem 0;
-                border-radius: 15px;
-                @include shadow;
-                //display: flex;
-                //flex-wrap: nowrap;
-                overflow: hidden;
-                position: relative;
-                transform: scale(1);
-
-                &-1, &-2,&-3,&-4,&-5,&-6,&-7,&-8,&-9,&-10,&-11,&-12{
-                    transform: scale(1);
-                }
-
-                @for $i from 1 through 12 {
-                    &.form__card_#{$i} {
-                        transform: scale(1.5);
-                        opacity: 0;
-                        animation-fill-mode: forwards;
-                        animation-name: fade-in;
-                        animation-duration: 1000ms;
-                        animation-delay: #{$i * 300}ms;
-                    }
-                }
-
-                &__content{
-                    //background: rgba(0, 0, 0, .2);
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    padding: 0 1rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    transition: width 1000ms;
-
-                    h2{
-                        @include ellipsis;    
-                    }
-
-                    &__info{
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-
-                        :first-child{
-                            font-weight: 300;
-                            @include ellipsis;
-                        }
-                        :last-child{
-                            white-space: nowrap;
-                        }
-                    }    
-                }
-                
-                &__content__label{
-                    width: calc(100% + 4.5rem);
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    cursor: pointer;
-                    transition: width 1000ms;
-
-                    &__checkwrap{
-                        height: 100%;
-                        aspect-ratio: 1 / 1;
-                        background: $adjust-color;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        position: absolute;
-                        right: 0;
-                        transition: right 1000ms;
-
-                        &__bgInt{
-                            width: 60%;
-                            aspect-ratio: 1 / 1;
-                            border-radius: 50%;
-                            background: white;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                            .fa-check{
-                                color: $adjust-color;
-                                font-size: 1.5rem;
-                            }
-                        }
-                    }  
-                }
-                
-                &__content__checkbox{
-                    //visibility: hidden;
-                    //margin-right: -100%;
-                    display: none;
-                    position: absolute;
-                    top: 2px;
-                    right: 2px;    
-                }
-
-                @media (min-width: 1024px){
-                    &__content__checkbox:hover ~ .form__card__content__label {
-                        width: 100%;  
-                    }
-    
-                    &__content__checkbox:hover ~ .form__card__content{
-                        width: calc(100% - 4rem);    
-                    }
-                }
-                 
-                &__content__checkbox:checked ~ .form__card__content__label {
-                    width: 100%;    
-                }
-
-                &__content__checkbox:checked ~ .form__card__content{
-                    width: calc(100% - 4rem);    
-                }
-            }
-
-            @keyframes fade-in {
-                0% {
-                    transform: scale(1.5);
-                    opacity: 0;
-                }
-                100% {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
+//Import other SASS
+/*Import other SASS*/
+@import "home_page.scss" ;
+@import "restos_pages.scss";
 
 // Footer
 /* Footer */
 footer{
     background: $bg-footer;
-
-
     dl{
         display: flex;
         flex-direction: column;
@@ -849,33 +458,25 @@ footer{
             }
         }
     }
-
     dt{
         margin: 1rem 0;
         @include theme-font;
         font-size: 1.4rem;
     }
-
     dd{margin: 0.4rem 0;}
-    
     a{
         color: white;
-
         .fa-utensils, .fa-handshake-angle{margin-right: 0.5rem;}
     }
-
     @media (min-width: 1023px){
         text-align: right;
         display: flex;
         justify-content: flex-end;
-
         dl{
             width: 70%;
-
             dt{
                 order: 5;
-                width: 20%; 
-                //text-align: none;
+                width: 20%;
             }
         }    
     }    

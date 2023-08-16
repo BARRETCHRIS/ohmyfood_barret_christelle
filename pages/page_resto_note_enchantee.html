@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christelle Barret">
+    <meta name="description" content="Projet OpenClarooms. Création du site de réservation de menus et de tables de restaurants dans le cadre d'un projet d'étude dans la formation : Développeur d'application - JavaScript React d'OpenClassrooms">
+    <meta name="keywords" content="HTML, CSS">
+    <title>Ohmyfood</title>
+    <!--GoogleFonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <!--Fontawesome kit-->
+    <script src="https://kit.fontawesome.com/ab2870ff1f.js" crossorigin="anonymous"></script>
+    <!--Style Sheet-->
+    <link rel="stylesheet" href="../assets/css/default.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="return-home">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Oh my food écrit en lettre arondies">              
+        </nav>
+    </header>
+    <main class="resto">
+        <div class="resto__img palette_gout"></div>
+        <section class="resto__menu">
+            <div class="resto__menu__title">
+                <h1>La note enchantée</h1>
+                <div class="heart__wrap">
+                    <div class="heart">
+                        <div class="heart__left"></div>
+                        <div class="heart__right"></div>
+                        <div class="heart__whiteright"></div> 
+                    </div>    
+                </div>
+                <div class="favorit">       
+                    <label for="favorit" class="heart">
+                        <input type="checkbox" id="favorit" name="favorit">
+                        <span class="heart__left heart__transit"></span>
+                        <span class="heart__right heart__transit"></span>
+                        <span class="heart__whiteright"></span> 
+                    </label>
+                </div>
+            </div>
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>ENTR&#201;ES</legend><hr>
+                
+                    <div class="form__card form__card_1">
+                        <input class="form__card__content__checkbox" type="checkbox" id="entreeOne" name="entreeOne">
+                        <div class="form__card__content">
+                            <h2>Ravioles de foie gras</h2>
+                            <div class="form__card__content__info">
+                                <span>Accompagnées de leur crème à la truffe</span>
+                                <span>25 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="entreeOne" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+
+                    <div class="form__card form__card_2">
+                        <input class="form__card__content__checkbox" type="checkbox" id="entreeTwo" name="entreeTwo">
+                        <div class="form__card__content">
+                            <h2>Caviar osciètre</h2>
+                            <div class="form__card__content__info">
+                                <span>Sur blini à la farine de blé noir</span>
+                                <span>35 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="entreeTwo" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+
+                    <div class="form__card form__card_3">
+                        <input class="form__card__content__checkbox" type="checkbox" id="entreeTree" name="entreeTree">
+                        <div class="form__card__content">
+                            <h2>Homard et espuma de potiron</h2>
+                            <div class="form__card__content__info">
+                                <span>Marinés aux zestes d'orange</span>
+                                <span>20 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="entreeTree" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+
+                    <div class="form__card form__card_4">
+                        <input class="form__card__content__checkbox" type="checkbox" id="entreeFour" name="entreeFour">
+                        <div class="form__card__content">
+                            <h2>Foie gras de canard cuit entier</h2>
+                            <div class="form__card__content__info">
+                                <span>Confiture de figue et pain toasté</span>
+                                <span>35 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="entreeFour" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>PLATS</legend>
+                    <hr>
+
+                    <div class="form__card form__card_5">
+                        <input class="form__card__content__checkbox" type="checkbox" id="mealOne" name="mealOne">
+                        <div class="form__card__content">
+                            <h2>Noix de coquilles Saint-Jacques</h2>
+                            <div class="form__card__content__info">
+                                <span>Sur lit de purée de céleri-rave</span>
+                                <span>40 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="mealOne" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+
+                    <div class="form__card form__card_6">
+                        <input class="form__card__content__checkbox" type="checkbox" id="mealTwo" name="mealTwo">
+                        <div class="form__card__content">
+                            <h2>Langoustine poêlée</h2>
+                            <div class="form__card__content__info">
+                                <span>Purée de patate douce</span>
+                                <span>35 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="mealTwo" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+
+                    <div class="form__card form__card_7">
+                        <input class="form__card__content__checkbox" type="checkbox" id="mealThree" name="mealThree">
+                        <div class="form__card__content">
+                            <h2>Mijoté de queue de bœuf</h2>
+                            <div class="form__card__content__info">
+                                <span>Et riz sauvage aux zestes de citron</span>
+                                <span>44 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="mealThree" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+                </fieldset >
+
+                <fieldset>
+                    <legend>DESSERTS</legend>
+                    <hr>
+
+                    <div class="form__card form__card_8">
+                        <input class="form__card__content__checkbox" type="checkbox" id="dessertOne" name="dessertOne">
+                        <div class="form__card__content">
+                            <h2>Macaron noisette et chocolat</h2>
+                            <div class="form__card__content__info">
+                                <span>Glace au caramel brun et sel de Guérande</span>
+                                <span>18 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="dessertOne" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+                    
+                    <div class="form__card form__card_9">
+                        <input class="form__card__content__checkbox" type="checkbox" id="dessertTwo" name="dessertTwo">
+                        <div class="form__card__content">
+                            <h2>Baba au rhum revisité</h2>
+                            <div class="form__card__content__info">
+                                <span>Avec son coulis de citron</span>
+                                <span>22 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="dessertTwo" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+                    
+                    <div class="form__card form__card_10">
+                        <input class="form__card__content__checkbox" type="checkbox" id="dessertTree" name="dessertTree">
+                        <div class="form__card__content">
+                            <h2>Tarte au citron meringuée</h2>
+                            <div class="form__card__content__info">
+                                <span>Déstructurée</span>
+                                <span>23 &#8364;</span>
+                            </div>
+                        </div>
+                        <label for="dessertTree" class="form__card__content__label">
+                            <span class="form__card__content__label__checkwrap">
+                                <span class="form__card__content__label__checkwrap__bgInt">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </span>
+                        </label>        
+                    </div>
+                </fieldset >
+
+                <input type="submit" name="order" id="order" value="Commander" class="btn">
+
+             </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <dl>
+            <dt><a href="../index.html" class="footer-title">ohmyfood</a></dt>
+            <dd><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></dd>
+            <dd><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></dd>
+            <dd><a href="#">Mentions Légales</a></dd>
+            <dd><a href="#">Contact</a></dd>
+        </dl>
+    </footer>
+   
+</body>
+</html>

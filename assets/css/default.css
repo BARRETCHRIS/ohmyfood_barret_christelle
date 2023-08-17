@@ -604,6 +604,7 @@ $start_loader: visited;
   text-align: center;
   line-height: 1.8rem;
   border-radius: 2px;
+  z-index: 10;
 }
 .home__resto article img {
   height: 14.45rem;

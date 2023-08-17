@@ -27,9 +27,10 @@
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 0 1rem 0.75rem;
     @include shadow;
-    span{
+    
+    .child1{
         width: 1.5rem;
         aspect-ratio: 1 / 1;
         display: block;
@@ -40,6 +41,8 @@
         line-height: 1.50rem;
         margin: 0 1rem 0 -1.25rem;
     }
+    .child2{@include ellipsis;}
+
     i{margin-right: 5vw;}
     .fa-store{color: $home-adjust-color;}
     }
@@ -99,9 +102,9 @@
             transition: all 400ms;
         }
         .home__article__content{
-            padding: 1rem;
-            h3{font-size: 1.12rem; font-weight: 700;}
-            p{font-weight: 300;}
+            padding: 1rem 3rem  1rem 1rem;
+            h3{font-size: 1.12rem; font-weight: 700; @include ellipsis}
+            p{font-weight: 300; @include ellipsis}
         }
         .favorit{
             position: absolute;

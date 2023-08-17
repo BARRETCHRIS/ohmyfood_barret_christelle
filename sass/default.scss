@@ -128,13 +128,28 @@ nav{
 // --SPECIALS ELEMENTS--
 /* --SPECIALS ELEMENTS-- */
 
+// --Import other SASS-- 
+/* --Import other SASS-- */
+
+//Loader home page 
+/*Loader home page*/
+@import "loader.scss";
+
+//Pages
+/*Pages*/
+@import "home_page.scss" ;
+@import "restos_pages.scss";
+
+// --Elements for all site-- 
+/* --Elements for all site-- */
+
 //Call to action
+/*Call to action*/
 .btn{
     max-width: 218px;
     height: 50px;
     padding: 0 0.5rem;
     background: $gradient;
-    //background: red;
     color: white;
     font-size: 1.1rem;
     border-radius: 50px;
@@ -151,16 +166,15 @@ nav{
         opacity: 0.85;
         box-shadow: 0 6px 4px rgba(0, 0, 0, .3);    
     }
-    @media (min-width: 300px){
-        width: 218px;
-        padding: 0 2vw;
-    }
+    @media (min-width: 300px){width: 218px;}
 }
 
-//heart test checkbox
+//Heart checkbox
+/*Heart checkbox*/
 .favorit{
-    width: 50px;
-    height: 50px;
+    $rule-width: 50px;
+    width: $rule-width;
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -180,7 +194,7 @@ nav{
             grid-row: 1 / 2;
             border: 2px solid black;
             background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-            box-shadow: inset 0 100px 0 rgba(255, 255, 255, 1);
+            box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
             transition: box-shadow 400ms;
         }
         &__left{
@@ -202,10 +216,22 @@ nav{
             margin-top: 1.5px;
             margin-left: 2px;
         }
+        input[type=checkbox] {
+            visibility: hidden;
+            width: 1rem;
+            height: 1rem;
+            position: relative;
+            &:checked ~ .heart__transit{
+                box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
+                border: none;
+            }
+            &:checked ~ .heart__whiteright{
+                display: none;
+            }
+        } 
         @media (min-width: 1024px){
             &:hover{
                 .heart__left, .heart__right{
-                    background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1)100%);
                     box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
                     border: none;       
                 }
@@ -213,35 +239,13 @@ nav{
                     display: none;
                 }
             }
-        }
-        input[type=checkbox] {
-            visibility: hidden;
-            width: 1rem;
-            height: 1rem;
-            position: relative;
-            &:checked ~ .heart__transit{
-                background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1)100%);
-                box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
-                border: none;
-            }
-            &:checked ~ .heart__whiteright{
-                display: none;
-            }
-        }    
+        }   
     }
 
 }
 
-
-
-//Import other SASS
-/*Import other SASS*/
-@import "loader.scss";
-@import "home_page.scss" ;
-@import "restos_pages.scss";
-
-// Footer
-/* Footer */
+// --FOOTER--
+/* --FOOTER-- */
 footer{
     background: $bg-footer;
     dl{

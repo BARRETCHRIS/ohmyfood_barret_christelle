@@ -71,6 +71,7 @@
                     opacity: 1;
                     -webkit-animation: text-rotate 2000ms  infinite;
                     animation: text-rotate 2000ms  infinite;
+                    //animation-delay: 1000ms;
 
                     @media (min-width: 500px){
                         font-size: 3.8vw;
@@ -79,18 +80,6 @@
                         font-size: 1.9rem;
                     }
                 }
-
-                &__logo{
-                    //@include theme-font;
-                    display: none;
-                }
-/*
-
-                &__wait{
-                    @include main-font;
-                    font-weight: 700;
-                    display: none;
-                }    */
             }
             
             &__shadowIn{
@@ -102,7 +91,7 @@
                 background: white;
                 -webkit-filter: blur(1.5px);
                 filter: blur(1.5px);
-                animation: plate-grow 1000ms ease-in 1;    
+                animation: in-plate-grow 1000ms ease-in 1;    
             }    
         }
         
@@ -117,79 +106,101 @@
 
 //Loader animation
 
-@-webkit-keyframes fade-out {
-    75% {
-        opacity: 1
+    @-webkit-keyframes fade-out {
+        75% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
     }
-    100% {
-        opacity: 0
-    }
-}
-@keyframes fade-out {
-    75% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0
-    }
-}
-
-@-webkit-keyframes text-rotate {
-    0%{
-        transform: rotate(720deg);
-        opacity: 0;
-    }
-    100%{
-        transform: rotate(1080deg);
-        opacity: 1;
-    }
-}
-@keyframes text-rotate {
-    0%{
-        transform: rotate(720deg);
-        opacity: 0.5;
-    }
-    100%{
-        transform: rotate(1080deg);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes plate-grow{
-    0%{
-        width: 10%;
-        aspect-ratio: 1.5 / 1;
-        border-radius: 5%;
-        transform: rotate(0deg);
+    @keyframes fade-out {
+        75% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
     }
 
-    100%{
-        width: 70%;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        transform: rotate(360deg);
+    @-webkit-keyframes text-rotate {
+        0%{
+            transform: rotate(720deg);
+            opacity: 0;
+        }
+        100%{
+            transform: rotate(1080deg);
+            opacity: 1;
+        }
     }
-}
-
-@keyframes plate-grow{
-    0%{
-        width: 10%;
-        aspect-ratio: 1.5 / 1;
-        border-radius: 5%;
-        transform: rotate(0deg);
-    }
-
-    100%{
-        width: 70%;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        transform: rotate(360deg);
+    @keyframes text-rotate {
+        0%{
+            transform: rotate(720deg);
+            opacity: 0.5;
+        }
+        100%{
+            transform: rotate(1080deg);
+            opacity: 1;
+        }
     }
 
-    
-}
+    @-webkit-keyframes plate-grow{
+        0%{
+            width: 10%;
+            aspect-ratio: 1.5 / 1;
+            border-radius: 5%;
+            transform: rotate(0deg);
+        }
 
+        100%{
+            width: 70%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes plate-grow{
+        0%{
+            width: 10%;
+            aspect-ratio: 1.5 / 1;
+            border-radius: 5%;
+            transform: rotate(0deg);
+        }
 
+        100%{
+            width: 70%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            transform: rotate(360deg);
+        }
+
+        
+    }
+
+    @-webkit-keyframes in-plate-grow{
+        0%{
+            width: 10%;
+            aspect-ratio: 1.5 / 1;
+            border-radius: 5%;
+        }
+        100%{
+            width: 70%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+        }
+    }
+    @keyframes in-plate-grow{
+        0%{
+            width: 10%;
+            aspect-ratio: 1.5 / 1;
+            border-radius: 5%;
+        }
+        100%{
+            width: 70%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+        }
+    }
 
 }
 

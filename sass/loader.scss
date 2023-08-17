@@ -1,6 +1,8 @@
 //Switch loader top and in Home Page: comment and uncomment your choise
-.loader_top{visibility: hidden;}
-//.loader_in{visibility: hidden;}
+//.loader_top{visibility: hidden;}
+.loader_in{visibility: hidden;}
+
+
 
 //loader animated
 .loader{ 
@@ -13,8 +15,6 @@
     justify-content: space-around;
     position: absolute;
     top: 0;
-    bottom: 0;
-    right: 0;
     left: 0;
     -webkit-animation: fade-out 4000ms forwards;
     animation: fade-out 4000ms forwards; 
@@ -25,15 +25,14 @@
         min-height: 150px;
         max-height: 400px;
         aspect-ratio: 1 / 1;
-        //background: #9356DC;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-evenly;
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 20%;
 
         &__plate{
             width: 70%;
@@ -74,7 +73,6 @@
                     opacity: 1;
                     -webkit-animation: text-rotate 2000ms  infinite;
                             animation: text-rotate 2000ms  infinite;
-                    //animation-delay: 1000ms;
 
                     @media (min-width: 500px){
                         font-size: 3.8vw;
@@ -89,10 +87,6 @@
                     display: none;
                 }
 /*
-                &__logo{
-                    @include theme-font;
-                    //display: none;
-                }
 
                 &__wait{
                     @include main-font;
@@ -123,7 +117,7 @@
     }
 
 //Loader animation
-/*
+
 @-webkit-keyframes fade-out {
     75% {
         opacity: 1
@@ -139,8 +133,8 @@
     100% {
         opacity: 0
     }
-}*/
-/*
+}
+
 @-webkit-keyframes text-rotate {
     0%{
         transform: rotate(720deg);
@@ -160,7 +154,7 @@
         transform: rotate(1080deg);
         opacity: 1;
     }
-}*/
+}
 
 @-webkit-keyframes plate-grow{
     0%{

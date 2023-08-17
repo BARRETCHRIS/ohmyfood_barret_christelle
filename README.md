@@ -11,9 +11,12 @@ _Etudiant auteur Christelle Barret, Crazy Beasty_
 ### ANIMATIONS 
    
 **LOADER**  
-_Changer le loader (top or in page) : sass/loader.scss commenter et décommenter l.2 et l.3.  
+_Changer le loader de position (top or in page) :   
+sass/loader.scss  
+Afficher le loader_top, commenter l.2 décommenter l.3.  
+Afficher le loader_in, décommenter l.2 et commenter l.3.  
 _keyframes en bas de page.  
-_Loader responsive.
+_Loader responsive.  
 
 
 

@@ -193,13 +193,17 @@ nav{
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-            box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
-            transition: box-shadow 400ms;
+            //box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
+            //transition: box-shadow 400ms;
             //TEST UPGRADE TRANSITION BG
             //background-image: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
             //transition: all 400ms ease-in-out;
         }
-        &__left, &__right{border: 2px solid black;}
+        &__left, &__right{
+            border: 2px solid black;
+            box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
+            transition: box-shadow 400ms;
+        }
         &__left{
             width: 200%;
             height: 110%;
@@ -221,6 +225,9 @@ nav{
             margin-top: 1.5px;
             margin-left: 2px;
             z-index: 3;
+            box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
+            transition: box-shadow 220ms;
+            
             
         }
         input[type=checkbox] {
@@ -237,11 +244,14 @@ nav{
                 //display: none;
                 box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
                 border: none;
+                width: 200%;
+                height: 110%;
+                margin: 0;
             }
         } 
         @media (min-width: 1024px){
             &:hover{
-                .heart__left, .heart__right{
+                /*.heart__left,*/ .heart__right{
                     box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
                     border: none;  
                     //background-image: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1)100%);     
@@ -250,6 +260,9 @@ nav{
                     //display: none;
                     box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
                     border: none;
+                    width: 200%;
+                    height: 110%;
+                    margin: 0;
                 }
             }
         }   

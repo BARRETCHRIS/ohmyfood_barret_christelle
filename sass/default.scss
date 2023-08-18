@@ -32,6 +32,7 @@ a{text-decoration: none; color: black;}
 input, fieldset{border: inherit; background-color: inherit; color: inherit; font-family: inherit;}
 
 body{
+    //width: 100%;
     @include main-font;
     font-size: 1rem;
 }
@@ -219,11 +220,14 @@ nav{
         &__whiteright{
             border: 1px solid white;
             //background: white;
-            width: calc(200% - 3.75px);
-            height: calc(110% - 3px);
-            border-radius: 0 10vw 10vw 0;
-            margin-top: 1.5px;
-            margin-left: 2px;
+            //width: calc(200% - 3.75px);
+            //height: calc(110% - 3px);
+            width: 200%;
+            height: 110%;
+            border: 2px solid rgba(255, 255, 255, 0);
+            border-radius: 0 9vw 9vw 0;
+            margin-top: 0;
+            margin-left: 0;
             z-index: 3;
             box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
             transition: box-shadow 220ms;

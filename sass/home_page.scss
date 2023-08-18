@@ -36,7 +36,7 @@
         display: block;
         border-radius: 0.75rem;
         color: white;
-        background: $home-adjust-color;
+        background: $hot-color1;
         text-align: center;
         line-height: 1.50rem;
         margin: 0 1rem 0 -1.25rem;
@@ -44,7 +44,7 @@
     .child2{@include ellipsis;}
 
     i{margin-right: 2vw;}
-    .fa-store{color: $home-adjust-color;}
+    .fa-store{color: $hot-color1;}
     }
     @media (min-width: 767px){
         max-width: 1080px;
@@ -88,8 +88,8 @@
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
-            background: $adjust-color;
-            color: $adjust-color-txt;
+            background: $cold-color;
+            color: $cold-color-txt;
             text-align: center;
             line-height: 1.80rem;
             border-radius: 2px;

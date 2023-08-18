@@ -21,6 +21,7 @@
         background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     }
     &__menu{
+        position: relative;
         background: $bg-content;
         border-radius: 40px 40px 0 0;
         max-width: 1080px;
@@ -56,7 +57,7 @@
                 width: 40px;
                 height: 3px;
                 border: none;
-                background: $adjust-color;
+                background: $cold-color;
                 margin: 0.25rem 0 0 0; 
             }
             .form__card{
@@ -126,7 +127,7 @@
                     &__checkwrap{
                         height: 100%;
                         aspect-ratio: 1 / 1;
-                        background: $adjust-color;
+                        background: $cold-color;
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
@@ -142,7 +143,7 @@
                             align-items: center;
                             justify-content: space-around;
                             .fa-check{
-                                color: $adjust-color;
+                                color: $cold-color;
                                 font-size: 1.5rem;
                             }
                         }

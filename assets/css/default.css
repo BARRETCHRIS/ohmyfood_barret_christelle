@@ -1057,29 +1057,33 @@ $start_loader: visited;
 .favorit .heart__left, .favorit .heart__right, .favorit .heart__whiteright {
   grid-column: 1/2;
   grid-row: 1/2;
-  border: 2px solid black;
   background: linear-gradient(135deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: inset 0 50px 0 rgb(255, 255, 255);
   transition: box-shadow 400ms;
+}
+.favorit .heart__left, .favorit .heart__right {
+  border: 2px solid black;
 }
 .favorit .heart__left {
   width: 200%;
   height: 110%;
   border-radius: 0 9vw 9vw 0;
+  z-index: 1;
 }
 .favorit .heart__right {
   height: 200%;
   width: 110%;
-  border-radius: 0 0 10vw 10vw;
+  border-radius: 0 0 9vw 9vw;
+  z-index: 2;
 }
 .favorit .heart__whiteright {
   border: 1px solid white;
-  background: white;
   width: calc(200% - 3.75px);
   height: calc(110% - 3px);
   border-radius: 0 10vw 10vw 0;
   margin-top: 1.5px;
   margin-left: 2px;
+  z-index: 3;
 }
 .favorit .heart input[type=checkbox] {
   visibility: hidden;
@@ -1088,11 +1092,12 @@ $start_loader: visited;
   position: relative;
 }
 .favorit .heart input[type=checkbox]:checked ~ .heart__transit {
-  box-shadow: inset 0 0px 0px rgb(255, 255, 255);
+  box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
   border: none;
 }
 .favorit .heart input[type=checkbox]:checked ~ .heart__whiteright {
-  display: none;
+  box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
+  border: none;
 }
 @media (min-width: 1024px) {
   .favorit .heart:hover .heart__left, .favorit .heart:hover .heart__right {
@@ -1100,7 +1105,8 @@ $start_loader: visited;
     border: none;
   }
   .favorit .heart:hover .heart__whiteright {
-    display: none;
+    box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
+    border: none;
   }
 }
 

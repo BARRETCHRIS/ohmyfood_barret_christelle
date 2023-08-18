@@ -192,29 +192,36 @@ nav{
         &__left, &__right, &__whiteright{
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            border: 2px solid black;
             background: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
             box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
             transition: box-shadow 400ms;
+            //TEST UPGRADE TRANSITION BG
+            //background-image: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+            //transition: all 400ms ease-in-out;
         }
+        &__left, &__right{border: 2px solid black;}
         &__left{
             width: 200%;
             height: 110%;
             border-radius: 0 9vw 9vw 0;
+            z-index: 1;
         }
         &__right{
             height: 200%;
             width: 110%;
-            border-radius: 0 0 10vw 10vw;
+            border-radius: 0 0 9vw 9vw;
+            z-index: 2;
         }
         &__whiteright{
             border: 1px solid white;
-            background: white;
+            //background: white;
             width: calc(200% - 3.75px);
             height: calc(110% - 3px);
             border-radius: 0 10vw 10vw 0;
             margin-top: 1.5px;
             margin-left: 2px;
+            z-index: 3;
+            
         }
         input[type=checkbox] {
             visibility: hidden;
@@ -222,21 +229,27 @@ nav{
             height: 1rem;
             position: relative;
             &:checked ~ .heart__transit{
-                box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
+                box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
                 border: none;
+                //background-image: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
             }
             &:checked ~ .heart__whiteright{
-                display: none;
+                //display: none;
+                box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
+                border: none;
             }
         } 
         @media (min-width: 1024px){
             &:hover{
                 .heart__left, .heart__right{
                     box-shadow: inset 0 0px 0px rgba(255, 255, 255, 1);
-                    border: none;       
+                    border: none;  
+                    //background-image: linear-gradient(135deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1)100%);     
                 }
                 .heart__whiteright{
-                    display: none;
+                    //display: none;
+                    box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0);
+                    border: none;
                 }
             }
         }   

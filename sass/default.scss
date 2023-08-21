@@ -196,7 +196,7 @@ nav{
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
-            transition: box-shadow 400ms;
+            transition: box-shadow 400ms ease-in-out;
         }
         &__left, &__right{
             background: linear-gradient(135deg, $hot-color1 0%, $hot-color2 100%);

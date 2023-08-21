@@ -883,7 +883,7 @@ nav .return-home .fa-arrow-left {
   grid-column: 1/2;
   grid-row: 1/2;
   box-shadow: inset 0 40px 0 rgb(255, 255, 255);
-  transition: box-shadow 400ms;
+  transition: box-shadow 400ms ease-in-out;
 }
 .favorit .heart__left, .favorit .heart__right {
   background: linear-gradient(135deg, #9356DC 0%, #FF79DA 100%);

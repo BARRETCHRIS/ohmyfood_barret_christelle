@@ -1,4 +1,5 @@
 //Switch loader top and in Home Page: comment and uncomment your choise
+
 //.loader_top{visibility: hidden;}
 .loader_in{visibility: hidden;}
 
@@ -44,7 +45,7 @@
             justify-content: space-around;
             position: relative;
             -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
-                    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
             border: 2px solid rgba(180, 214, 205, 0.5);
             border-bottom: none;
             transform: rotate(0deg);
@@ -92,7 +93,7 @@
                 -webkit-filter: blur(1.5px);
                 filter: blur(1.5px);
                 -webkit-animation: in-plate-grow 1000ms ease-in 1;
-                        animation: in-plate-grow 1000ms ease-in 1;    
+                animation: in-plate-grow 1000ms ease-in 1;    
             }    
         }
         

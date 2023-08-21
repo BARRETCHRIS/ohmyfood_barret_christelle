@@ -174,7 +174,8 @@ nav{
 //Heart checkbox
 /*Heart checkbox*/
 .favorit{
-    $rule-width: 50px;
+    /*$rule-width : modidifier sa valeur pour changer la taille du coeur. les effets s'ajuste automatiquement au nouveau réglage */
+    $rule-width: 50px; 
     width: $rule-width;
     aspect-ratio: 1 / 1;
     display: flex;
@@ -201,17 +202,17 @@ nav{
             background: linear-gradient(135deg, $hot-color1 0%, $hot-color2 100%);
             border: 2px solid black;
             box-shadow: inset 0 $rule-width 0 rgba(255, 255, 255, 1);
-            transition: box-shadow 200ms;
+            transition: box-shadow 400ms;
         }
         &__left{
             width: 200%;
-            height: 110%;
+            height: 100%;
             border-radius: 0 9vw 9vw 0;
             z-index: 1;
         }
         &__right{
             height: 200%;
-            width: 110%;
+            width: 100%;
             border-radius: 0 0 9vw 9vw;
             z-index: 2;
         }
@@ -219,7 +220,7 @@ nav{
             border: 1px solid white;
             background: white;
             width: calc(200% - 3.8px);
-            height: calc(110% - 3.8px);
+            height: calc(100% - 3.8px);
             border-radius: 0 9vw 9vw 0;
             margin-top: 1.8px;
             margin-left: 2px;
@@ -254,7 +255,6 @@ nav{
             }
         }   
     }
-
 }
 
 // --FOOTER--

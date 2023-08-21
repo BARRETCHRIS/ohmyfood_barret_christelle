@@ -236,26 +236,6 @@ nav .return-home .fa-arrow-left {
     opacity: 0;
   }
 }
-@-webkit-keyframes text-rotate {
-  0% {
-    transform: rotate(720deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(1080deg);
-    opacity: 1;
-  }
-}
-@keyframes text-rotate {
-  0% {
-    transform: rotate(720deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(1080deg);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes plate-grow {
   0% {
     width: 10%;
@@ -306,6 +286,26 @@ nav .return-home .fa-arrow-left {
     width: 70%;
     aspect-ratio: 1/1;
     border-radius: 50%;
+  }
+}
+@-webkit-keyframes text-rotate {
+  0% {
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 1;
+  }
+}
+@keyframes text-rotate {
+  0% {
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 1;
   }
 }
 

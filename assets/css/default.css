@@ -169,7 +169,7 @@ nav .return-home .fa-arrow-left {
   border-bottom: none;
   transform: rotate(0deg);
   -webkit-animation: plate-grow 1000ms ease-in 0ms 1;
-  animation: plate-grow 1000ms ease-in 200ms 1;
+  animation: plate-grow 1000ms ease-in 0ms 1;
 }
 .loader__wrapper__plate__text {
   position: absolute;

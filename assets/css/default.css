@@ -169,7 +169,7 @@ nav .return-home .fa-arrow-left {
   border-bottom: none;
   transform: rotate(0deg);
   -webkit-animation: plate-grow 1000ms ease-in 0ms 1;
-  animation: plate-grow 1000ms ease-in 1;
+  animation: plate-grow 1000ms ease-in 200ms 1;
 }
 .loader__wrapper__plate__text {
   position: absolute;
@@ -191,7 +191,7 @@ nav .return-home .fa-arrow-left {
   color: #9356DC;
   opacity: 1;
   -webkit-animation: text-rotate 2000ms infinite;
-  animation: text-rotate 2000ms infinite;
+  animation: text-rotate 2000ms infinite 300ms;
 }
 @media (min-width: 500px) {
   .loader__wrapper__plate__text__wait {
@@ -249,7 +249,7 @@ nav .return-home .fa-arrow-left {
 @keyframes text-rotate {
   0% {
     transform: rotate(720deg);
-    opacity: 0.5;
+    opacity: 0;
   }
   100% {
     transform: rotate(1080deg);

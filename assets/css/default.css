@@ -226,7 +226,12 @@ nav .return-home .fa-arrow-left {
   0% {
     aspect-ratio: 1.5/1;
     border-radius: 5%;
-    transform: rotate(0deg) scale(0.1);
+    transform: rotate(0deg) scale(0.3);
+  }
+  30% {
+    aspect-ratio: 1.5/1;
+    border-radius: 5%;
+    transform: rotate(0deg) scale(0.3);
   }
   100% {
     aspect-ratio: 1/1;
@@ -238,7 +243,12 @@ nav .return-home .fa-arrow-left {
   0% {
     aspect-ratio: 1.5/1;
     border-radius: 5%;
-    transform: rotate(0deg) scale(0.01);
+    transform: rotate(0deg) scale(0.3);
+  }
+  30% {
+    aspect-ratio: 1.5/1;
+    border-radius: 5%;
+    transform: rotate(0deg) scale(0.3);
   }
   100% {
     aspect-ratio: 1/1;
@@ -278,11 +288,11 @@ nav .return-home .fa-arrow-left {
 }
 @keyframes text-rotate {
   0% {
-    transform: rotate(720deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   100% {
-    transform: rotate(1080deg);
+    transform: rotate(360deg);
     opacity: 1;
   }
 }

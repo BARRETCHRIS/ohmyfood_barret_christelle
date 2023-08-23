@@ -139,7 +139,6 @@ nav .return-home .fa-arrow-left {
   z-index: 1000;
 }
 .loader__wrapper {
-  min-height: none;
   max-height: 400px;
   max-width: 400px;
   width: 100%;
@@ -184,7 +183,6 @@ nav .return-home .fa-arrow-left {
 }
 .loader__wrapper__plate__text__wait {
   position: absolute;
-  opacity: 1;
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   text-align: center;
@@ -238,52 +236,44 @@ nav .return-home .fa-arrow-left {
 }
 @-webkit-keyframes plate-grow {
   0% {
-    width: 10%;
     aspect-ratio: 1.5/1;
     border-radius: 5%;
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.1);
   }
   100% {
-    width: 70%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1);
   }
 }
 @keyframes plate-grow {
   0% {
-    width: 10%;
     aspect-ratio: 1.5/1;
     border-radius: 5%;
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.01);
   }
   100% {
-    width: 70%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1);
   }
 }
 @-webkit-keyframes in-plate-grow {
   0% {
-    width: 10%;
     aspect-ratio: 1.5/1;
     border-radius: 5%;
   }
   100% {
-    width: 70%;
     aspect-ratio: 1/1;
     border-radius: 50%;
   }
 }
 @keyframes in-plate-grow {
   0% {
-    width: 10%;
     aspect-ratio: 1.5/1;
     border-radius: 5%;
   }
   100% {
-    width: 70%;
     aspect-ratio: 1/1;
     border-radius: 50%;
   }
@@ -354,7 +344,7 @@ nav .return-home .fa-arrow-left {
   margin: 1rem 0 1rem 0.75rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-.home__steps li .child1 {
+.home__steps li span:first-child {
   width: 1.5rem;
   aspect-ratio: 1/1;
   display: block;
@@ -365,7 +355,7 @@ nav .return-home .fa-arrow-left {
   line-height: 1.5rem;
   margin: 0 1rem 0 -1.25rem;
 }
-.home__steps li .child2 {
+.home__steps li span:last-child {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -545,7 +535,6 @@ nav .return-home .fa-arrow-left {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
-  transform: scale(1);
 }
 .resto__menu form .form__card.form__card_1 {
   transform: scale(1);
@@ -871,7 +860,6 @@ nav .return-home .fa-arrow-left {
   width: 80%;
   aspect-ratio: 1/1;
   display: grid;
-  top: 3%;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 50%);
   position: relative;
@@ -894,13 +882,13 @@ nav .return-home .fa-arrow-left {
 .favorit .heart__left {
   width: 200%;
   height: 100%;
-  border-radius: 0 9vw 9vw 0;
+  border-radius: 4vw 9vw 9vw 0;
   z-index: 1;
 }
 .favorit .heart__right {
   height: 200%;
   width: 100%;
-  border-radius: 0 0 9vw 9vw;
+  border-radius: 4vw 0 9vw 9vw;
   z-index: 2;
 }
 .favorit .heart__whiteright {
@@ -908,7 +896,7 @@ nav .return-home .fa-arrow-left {
   background: white;
   width: calc(200% - 3.8px);
   height: calc(100% - 3px);
-  border-radius: 0 9vw 9vw 0;
+  border-radius: 4vw 9vw 9vw 0;
   margin-top: 1.5px;
   margin-left: 2px;
   z-index: 3;

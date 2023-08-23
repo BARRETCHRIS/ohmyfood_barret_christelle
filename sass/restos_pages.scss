@@ -69,7 +69,6 @@
                 @include shadow;
                 overflow: hidden;
                 position: relative;
-                transform: scale(1);
                
                 @for $i from 1 through 12 {
                     &.form__card_#{$i} {

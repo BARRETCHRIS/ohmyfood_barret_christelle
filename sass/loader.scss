@@ -20,7 +20,6 @@
     z-index: 1000;
 
     &__wrapper{
-        min-height: none;
         max-height: 400px;
         max-width: 400px;
         width: 100%;
@@ -65,7 +64,6 @@
                 
                 &__wait{
                     position: absolute;
-                    opacity: 1;
                     @include theme-font;
                     font-size: 1.5rem;
                     text-align: center;
@@ -127,32 +125,28 @@
 
     @-webkit-keyframes plate-grow{
         0%{
-            width: 10%;
             aspect-ratio: 1.5 / 1;
             border-radius: 5%;
-            transform: rotate(0deg);
+            transform: rotate(0deg) scale(0.1);
         }
 
         100%{
-            width: 70%;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
-            transform: rotate(360deg);
+            transform: rotate(360deg) scale(1);
         }
     }
     @keyframes plate-grow{
         0%{
-            width: 10%;
             aspect-ratio: 1.5 / 1;
             border-radius: 5%;
-            transform: rotate(0deg);
+            transform: rotate(0deg) scale(0.01);
         }
 
         100%{
-            width: 70%;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
-            transform: rotate(360deg);
+            transform: rotate(360deg) scale(1);
         }
 
         
@@ -160,24 +154,21 @@
 
     @-webkit-keyframes in-plate-grow{
         0%{
-            width: 10%;
             aspect-ratio: 1.5 / 1;
             border-radius: 5%;
         }
         100%{
-            width: 70%;
+            //width: 70%;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
         }
     }
     @keyframes in-plate-grow{
         0%{
-            width: 10%;
             aspect-ratio: 1.5 / 1;
             border-radius: 5%;
         }
         100%{
-            width: 70%;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
         }

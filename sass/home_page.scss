@@ -29,8 +29,8 @@
     padding: 0 0.5rem;
     margin: 1rem 0 1rem 0.75rem;
     @include shadow;
-    
-    .child1{
+
+    span:first-child{
         width: 1.5rem;
         aspect-ratio: 1 / 1;
         display: block;
@@ -41,8 +41,8 @@
         line-height: 1.50rem;
         margin: 0 1rem 0 -1.25rem;
     }
-    .child2{@include ellipsis;}
-
+    span:last-child{@include ellipsis;}
+    
     i{margin-right: 2vw;}
     .fa-store{color: $hot-color1;}
     }

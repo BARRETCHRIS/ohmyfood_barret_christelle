@@ -176,7 +176,7 @@ nav .return-home .fa-arrow-left {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -185,21 +185,9 @@ nav .return-home .fa-arrow-left {
   position: absolute;
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
-  text-align: center;
   color: #9356DC;
-  opacity: 1;
   -webkit-animation: text-rotate 2000ms infinite;
-  animation: text-rotate 2000ms infinite 300ms;
-}
-@media (min-width: 500px) {
-  .loader__wrapper__plate__text__wait {
-    font-size: 3.8vw;
-  }
-}
-@media (min-width: 780px) {
-  .loader__wrapper__plate__text__wait {
-    font-size: 1.9rem;
-  }
+  animation: text-rotate 2000ms infinite;
 }
 .loader__wrapper__plate__shadowIn {
   height: 70%;
@@ -280,11 +268,11 @@ nav .return-home .fa-arrow-left {
 }
 @-webkit-keyframes text-rotate {
   0% {
-    transform: rotate(720deg);
+    transform: rotate(0deg);
     opacity: 0;
   }
   100% {
-    transform: rotate(1080deg);
+    transform: rotate(360deg);
     opacity: 1;
   }
 }
@@ -763,7 +751,6 @@ nav .return-home .fa-arrow-left {
   justify-content: space-around;
   position: absolute;
   right: 0;
-  transition: right 1000ms;
 }
 .resto__menu form .form__card__content__label__checkwrap__bgInt {
   width: 60%;

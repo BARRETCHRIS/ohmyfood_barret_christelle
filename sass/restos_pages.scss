@@ -123,6 +123,7 @@
                     left: 0;
                     cursor: pointer;
                     transition: width 1000ms;
+                    
                     &__checkwrap{
                         height: 100%;
                         aspect-ratio: 1 / 1;
@@ -132,7 +133,6 @@
                         justify-content: space-around;
                         position: absolute;
                         right: 0;
-                        transition: right 1000ms;
                         &__bgInt{
                             width: 60%;
                             aspect-ratio: 1 / 1;

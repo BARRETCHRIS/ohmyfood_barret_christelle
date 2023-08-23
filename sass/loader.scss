@@ -57,7 +57,7 @@
                 bottom: 0;
                 right: 0;
                 left: 0;
-                z-index: 5;
+                z-index: 2;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
@@ -66,18 +66,9 @@
                     position: absolute;
                     @include theme-font;
                     font-size: 1.5rem;
-                    text-align: center;
                     color: $hot-color1;
-                    opacity: 1;
                     -webkit-animation: text-rotate 2000ms  infinite;
-                    animation: text-rotate 2000ms  infinite 300ms;
-
-                    @media (min-width: 500px){
-                        font-size: 3.8vw;
-                    }
-                    @media (min-width: 780px){
-                        font-size: 1.9rem;
-                    }
+                    animation: text-rotate 2000ms  infinite;
                 }
             }
             
@@ -176,11 +167,11 @@
 
     @-webkit-keyframes text-rotate {
         0%{
-            transform: rotate(720deg);
+            transform: rotate(0deg);
             opacity: 0;
         }
         100%{
-            transform: rotate(1080deg);
+            transform: rotate(360deg);
             opacity: 1;
         }
     }

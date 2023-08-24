@@ -891,8 +891,9 @@ nav .return-home .fa-arrow-left {
 .favorit .heart__whiteright {
   border: 1px solid white;
   background: white;
-  width: calc(200% - 3.8px);
+  width: calc(200% - 4px);
   height: calc(100% - 3px);
+  border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 4vw 9vw 9vw 0;
   margin-top: 1.5px;
   margin-left: 2px;
